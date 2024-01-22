@@ -49,15 +49,6 @@ class Trecho{
             return $conn->query("DELETE FROM trecho WHERE id=$this->id")->fetch();
     }
 
-    static function listaPremium(){
-        $conn = new Conexao();
-        $sqlPremium = "SELECT * FROM texto WHERE premium='sim' ORDER BY valor_pago DESC";
-        $stmtPremium = $conn->query($sqlPremium);
-
-        # Arrary de objetos Texto
-        return $stmtPremium->fetchAll(\PDO::FETCH_CLASS, "\Blog\Classes\Texto");
-    }
-
     static function lista(){
         $conn = new Conexao();
         $sql = "SELECT * FROM trecho ORDER BY id DESC";
