@@ -30,12 +30,7 @@ class Trecho{
 
     function salvar(){
         $conn = new Conexao();
-        if ($this->valor_pago){
-            $sql = "INSERT INTO texto (titulo, texto, premium, valor_pago, usuario_id) VALUES ('$this->titulo', '$this->texto', '$this->premium', '$this->valor_pago', '$this->usuario_id' )";
-        }
-        else{
-            $sql = "INSERT INTO texto (titulo, texto, premium, usuario_id) VALUES ('$this->titulo', '$this->texto', '$this->premium', '$this->usuario_id' )";
-        }
+        $sql = "INSERT INTO trecho (titulo, linguagem, texto) VALUES ('$this->titulo',  '$this->linguagem', '$this->texto' )";
 
         $r = $conn->query($sql);
         if ($r){
