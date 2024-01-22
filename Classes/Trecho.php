@@ -2,28 +2,25 @@
 
 namespace Blog\Classes;
 
-class Texto{
+class Trecho{
 
     public $id;
     public $titulo;
+    public $linguagem;
     public $texto;
-    public $premium;
-    public $valor_pago;
-    public $usuario_id;
+
 
 
     function __construct($id=null)
     {
         if ($id){
             $conn = new Conexao();
-            $texto = $conn->query("SELECT * FROM texto WHERE id=$id")->fetch();
-            if ($texto){
-                $this->id=$texto['id'];
-                $this->titulo=$texto['titulo'];
-                $this->texto=$texto['texto'];
-                $this->premium=$texto['premium'];
-                $this->valor_pago=$texto['valor_pago'];
-                $this->usuario_id=$texto['usuario_id'];
+            $trecho = $conn->query("SELECT * FROM trecho WHERE id=$id")->fetch();
+            if ($trecho){
+                $this->id=$trecho['id'];
+                $this->titulo=$trecho['titulo'];
+                $this->linguagem=$trecho['linguagem'];
+                $this->texto=$trecho['texto'];
             } 
             else{
                 die ('Registro não Encontrado');
