@@ -58,13 +58,13 @@ class Trecho{
         return $stmtPremium->fetchAll(\PDO::FETCH_CLASS, "\Blog\Classes\Texto");
     }
 
-    static function listaNormal(){
+    static function lista(){
         $conn = new Conexao();
-        $sqlNormal = "SELECT * FROM texto WHERE premium='nao' ORDER BY id DESC";
-        $stmtNormal = $conn->query($sqlNormal);
+        $sql = "SELECT * FROM trecho ORDER BY id DESC";
+        $stmt = $conn->query($sql);
 
         # Arrary de objetos Texto
-        return $stmtNormal->fetchAll(\PDO::FETCH_CLASS, "\Blog\Classes\Texto");
+        return $stmt->fetchAll(\PDO::FETCH_CLASS, "\Blog\Classes\Trecho");
     }
 }
 
