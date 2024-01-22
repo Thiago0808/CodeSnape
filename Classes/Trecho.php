@@ -41,7 +41,7 @@ class Trecho{
 
     function atualizar(){
             $conn = new Conexao();
-            return $conn->query("UPDATE `texto` SET `titulo`='$this->titulo',`texto`='$this->texto', `premium`='$this->premium', `valor_pago`='$this->valor_pago',`usuario_id`='$this->usuario_id' WHERE id=$this->id")->fetch();
+            return $conn->query("UPDATE `trecho` SET `titulo`='$this->titulo', `linguagem`='$this->linguagem', `texto`='$this->texto' WHERE id=$this->id")->fetch();
     }
 
     function deletar(){
