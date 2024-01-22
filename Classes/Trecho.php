@@ -46,7 +46,7 @@ class Trecho{
 
     function deletar(){
             $conn = new Conexao();
-            return $conn->query("DELETE FROM texto WHERE id=$this->id")->fetch();
+            return $conn->query("DELETE FROM trecho WHERE id=$this->id")->fetch();
     }
 
     function getUsuario(){
