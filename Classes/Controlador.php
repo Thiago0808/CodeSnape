@@ -12,7 +12,7 @@ class Controlador{
         #definr a página
         $page = "inicial";
 
-        $trechos = Trecho::lista();
+        //$trechos = Trecho::lista();
 
 
         # Incorporar o Template

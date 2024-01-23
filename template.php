@@ -26,18 +26,23 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="http://startbootstrap.com">CodeSnape</a>
+          <a class="navbar-brand" href="index.php">CodeSnape</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#about">Meus Trechos</a></li>
-            <li><a href="#services">Adicionar</a></li>
+            <li><a href="index.php">Meus Trechos</a></li>
+            <li><a href="?p=novoTrecho">Adicionar</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
     </nav>
+
+    <div class="container">
+      <?php require "pages/$page.php"; ?>
+    </div>
+
 
 
 
