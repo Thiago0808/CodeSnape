@@ -4,7 +4,7 @@
         <h1 class="page-header">Adicionar <small>Novo Trecho</small></h1>
     </div>
     
-    <form class="col-md-4">
+    <form>
         <div class="form-group">
             <label for="exampleFormControlInput1">Nome do Trecho:</label>
             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Titulo">

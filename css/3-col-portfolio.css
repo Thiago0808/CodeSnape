@@ -9,3 +9,8 @@ body {
 footer {
 	margin: 50px 0;
 }
+
+form{
+	padding-left: 15px;
+	padding-right: 15px;
+}
