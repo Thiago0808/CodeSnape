@@ -55,7 +55,7 @@ class Trecho{
         $stmt = $conn->query($sql);
 
         # Arrary de objetos Texto
-        return $stmt->fetchAll(\PDO::FETCH_CLASS, "\Blog\Classes\Trecho");
+        return $stmt->fetchAll(\PDO::FETCH_CLASS, "\CodeSnape\Classes\Trecho");
     }
 }
 
