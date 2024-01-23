@@ -16,7 +16,7 @@ class Controlador{
 
 
         # Incorporar o Template
-        require 'template/template1.php';
+        require 'template.php';
     }
 
     // TODO
@@ -36,6 +36,6 @@ class Controlador{
         }
 
         $page = 'novoTrecho';
-        require 'template/template1.php';
+        require 'template.php';
     }
 }
