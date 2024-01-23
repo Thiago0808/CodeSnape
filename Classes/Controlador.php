@@ -22,30 +22,20 @@ class Controlador{
     // TODO
 
 
-    function novoTexto(){
+    function novoTrecho(){
         if (filter_input(INPUT_POST, 'texto')){
-            $t = new Texto();
+            $t = new Trecho();
             $t -> titulo = filter_input(INPUT_POST, 'titulo', FILTER_SANITIZE_SPECIAL_CHARS);
+            $t -> linguagem = filter_input(INPUT_POST, 'linguagem', FILTER_SANITIZE_SPECIAL_CHARS);
             $t -> texto = filter_input(INPUT_POST, 'texto', FILTER_SANITIZE_SPECIAL_CHARS);
-            $t -> premium = filter_input(INPUT_POST, 'premium', FILTER_SANITIZE_SPECIAL_CHARS);
 
-            if  ( (strlen($t->texto) > 50)  && (filter_input(INPUT_POST, 'mais') != "mais") ){
-                header('Location: index.php?p=novoTexto&msg='.urlencode('Limite de Caracteres Ultrapassado! Pague os R$20.00 para comentar tanto!'));
-                exit;
-            };
-
-            if (filter_input(INPUT_POST, 'valor_pago')){
-                $t -> valor_pago = filter_input(INPUT_POST, 'valor_pago', FILTER_SANITIZE_SPECIAL_CHARS);
-            }
-
-            $t -> usuario_id = $_SESSION['id'];
             if ($t->salvar()){
                 header('Location:index.php');
                 exit;
             };
         }
 
-        $page = 'novoTexto';
+        $page = 'novoTrecho';
         require 'template/template1.php';
     }
 }
