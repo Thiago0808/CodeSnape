@@ -1,6 +1,6 @@
 <?php
 
-namespace Blog\Classes;
+namespace CodeSnape\Classes;
 use \PDO;
 use \PDOException;
 
