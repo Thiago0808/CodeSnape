@@ -58,7 +58,6 @@ class Trecho{
         return $stmt->fetchAll(\PDO::FETCH_CLASS, "\CodeSnape\Classes\Trecho");
     }
 
-    
 }
 
 ?>

@@ -14,6 +14,10 @@ class Controlador{
 
         $trechos = Trecho::lista();
 
+        foreach ($trechos as $t){
+            $t->texto = str_replace("&#13;&#10;", "<br />", $t->texto);
+        }
+
 
         # Incorporar o Template
         require 'template.php';

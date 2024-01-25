@@ -14,9 +14,8 @@
 
   <?php
   foreach ($trechos as $t){
-    $codigo = str_replace("&#13;&#10;", "<br />", $t->texto);
     echo "<div class='col-md-4 portfolio-item'>";
-      echo "<code>$codigo</code>";
+      echo "<code>$t->texto</code>";
       //echo "<a href=''><img class='img-responsive' src='http://placehold.it/700x400'></a>";
       echo "<h3><a href=''>$t->titulo</a></h3>";
       echo "<p>$t->linguagem</p>";
