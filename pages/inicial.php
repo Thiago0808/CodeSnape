@@ -2,7 +2,7 @@
 <div class="row">
 
   <div class="col-lg-12">
-    <h1 class="page-header">3 Col Portfolio <small>Showcase Your Work</small></h1>
+    <h1 class="page-header">Meus Trechos <small>Encontre seus códigos rapidamente</small></h1>
   </div>
 
 </div>
