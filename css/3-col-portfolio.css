@@ -14,3 +14,11 @@ form{
 	padding-left: 15px;
 	padding-right: 15px;
 }
+
+code{
+	display: block;
+    height: 20vh;
+    max-width: 100%;
+	vertical-align: middle;
+	word-break:break-all;
+}

@@ -57,6 +57,8 @@ class Trecho{
         # Arrary de objetos Texto
         return $stmt->fetchAll(\PDO::FETCH_CLASS, "\CodeSnape\Classes\Trecho");
     }
+
+    
 }
 
 ?>
