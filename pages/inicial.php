@@ -16,7 +16,6 @@
   foreach ($trechos as $t){
     echo "<div class='col-md-4 portfolio-item'>";
       echo "<code>$t->texto</code>";
-      //echo "<a href=''><img class='img-responsive' src='http://placehold.it/700x400'></a>";
       echo "<h3><a href=''>$t->titulo</a></h3>";
       echo "<p>$t->linguagem</p>";
     echo "</div>";

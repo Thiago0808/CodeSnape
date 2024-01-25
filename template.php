@@ -11,8 +11,12 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
 
-    <!-- Custom CSS for the '3 Col Portfolio' Template -->
-    <link href="css/3-col-portfolio.css" rel="stylesheet">
+    <!-- Custom CSS  -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Responsive CSS  -->
+    <link href="css/responsive.css" rel="stylesheet">
+
   </head>
 
   <body>
