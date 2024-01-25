@@ -1,1 +1,3 @@
-<h1>Ver Trecho</h1>
+<?php
+echo $t->titulo;
+?>

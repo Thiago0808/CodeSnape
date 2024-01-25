@@ -44,6 +44,11 @@ class Controlador{
     }
 
     function verTrecho(){
+        if (filter_input(INPUT_GET, 'id')){
+            $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+            $t = new Trecho($id);
+        }
+
         $page = 'verTrecho';
         require 'template.php';
     }
