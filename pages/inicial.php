@@ -16,7 +16,7 @@
   foreach ($trechos as $t){
     echo "<div class='col-md-4 portfolio-item'>";
       echo "<code>$t->texto</code>";
-      echo "<h3><a href=''>$t->titulo</a></h3>";
+      echo "<h3><a href='?p=verTrecho&id=$t->id'>$t->titulo</a></h3>";
       echo "<p>$t->linguagem</p>";
     echo "</div>";
   }
