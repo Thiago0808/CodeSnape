@@ -58,10 +58,10 @@ class Controlador{
         if (filter_input(INPUT_GET, 'id')){
             $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
             $t = new Trecho($id);
-            $t->deletar($t->id)
+            $t->deletar();
         }
 
-        $page = 'inicial';
-        require 'template.php';
+        header('Location:index.php');
+        exit;
     }
 }

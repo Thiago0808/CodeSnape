@@ -9,7 +9,6 @@
 
 
 
-
 <div class="row">
 
   <?php
@@ -18,6 +17,7 @@
       echo "<code class='code_inicial'>$t->texto</code>";
       echo "<h3><a href='?p=verTrecho&id=$t->id'>$t->titulo</a></h3>";
       echo "<p>$t->linguagem</p>";
+      echo "<a href='?p=deletarTrecho&id=$t->id'><button type='button' class='btn btn-danger'>Deletar</button></a>";
     echo "</div>";
   }
   ?>

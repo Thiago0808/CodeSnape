@@ -47,6 +47,7 @@ class Trecho{
     function deletar(){
             $conn = new Conexao();
             return $conn->query("DELETE FROM trecho WHERE id=$this->id")->fetch();
+            return true;
     }
 
     static function lista(){

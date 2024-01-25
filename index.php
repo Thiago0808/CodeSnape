@@ -15,6 +15,10 @@ switch ($p) {
     case 'verTrecho':
         $c->verTrecho();
         break;
+
+    case 'deletarTrecho':
+        $c->deletarTrecho();
+        break;
     
     default:
         $c->inicial();
