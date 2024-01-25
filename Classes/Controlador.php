@@ -53,4 +53,15 @@ class Controlador{
         $page = 'verTrecho';
         require 'template.php';
     }
+
+    function deletarTrecho(){
+        if (filter_input(INPUT_GET, 'id')){
+            $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+            $t = new Trecho($id);
+            $t->deletar($t->id)
+        }
+
+        $page = 'inicial';
+        require 'template.php';
+    }
 }
