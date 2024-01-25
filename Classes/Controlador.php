@@ -42,4 +42,9 @@ class Controlador{
         $page = 'novoTrecho';
         require 'template.php';
     }
+
+    function verTrecho(){
+        $page = 'verTrecho';
+        require 'template.php';
+    }
 }

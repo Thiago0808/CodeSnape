@@ -12,6 +12,10 @@ switch ($p) {
         $c->novoTrecho();
         break;
     
+    case 'verTrecho':
+        $c->verTrecho();
+        break;
+    
     default:
         $c->inicial();
         break;
