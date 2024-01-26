@@ -7,7 +7,7 @@
     <form action="" method="post">
         <div class="form-group">
             <label for="exampleFormControlInput1">Nome do Trecho:</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Titulo" name="titulo">
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Titulo" name="titulo" maxlength="24">
         </div>
         <div class="form-group">
             <label for="exampleFormControlSelect1">Linguagem</label>
