@@ -16,6 +16,10 @@ switch ($p) {
         $c->verTrecho();
         break;
 
+    case 'editarTrecho':
+        $c->editarTrecho();
+        break;
+
     case 'deletarTrecho':
         $c->deletarTrecho();
         break;
