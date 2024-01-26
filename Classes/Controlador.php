@@ -64,4 +64,28 @@ class Controlador{
         header('Location:index.php');
         exit;
     }
+
+    function editarTrecho(){
+
+        if (filter_input(INPUT_GET, 'id')){
+            $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+            $t = new Trecho($id);
+            $t->texto = str_replace("&#13;&#10;", "<br />", $t->texto);
+        }
+
+        if (filter_input(INPUT_POST, 'texto')){
+            $t = new Trecho();
+            $t -> titulo = filter_input(INPUT_POST, 'titulo', FILTER_SANITIZE_SPECIAL_CHARS);
+            $t -> linguagem = filter_input(INPUT_POST, 'linguagem', FILTER_SANITIZE_SPECIAL_CHARS);
+            $t -> texto = filter_input(INPUT_POST, 'texto', FILTER_SANITIZE_SPECIAL_CHARS);
+
+            if ($t->editar()){
+                header('Location:index.php');
+                exit;
+            };
+        }
+
+        $page = 'editarTrecho';
+        require 'template.php';
+    }
 }

@@ -39,7 +39,7 @@ class Trecho{
         return $r;
     }
 
-    function atualizar(){
+    function editar(){
             $conn = new Conexao();
             return $conn->query("UPDATE `trecho` SET `titulo`='$this->titulo', `linguagem`='$this->linguagem', `texto`='$this->texto' WHERE id=$this->id")->fetch();
     }
