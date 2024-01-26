@@ -75,14 +75,14 @@ class Controlador{
 
         if (filter_input(INPUT_POST, 'texto')){
             $t = new Trecho();
+            $t->id = $id;
             $t -> titulo = filter_input(INPUT_POST, 'titulo', FILTER_SANITIZE_SPECIAL_CHARS);
             $t -> linguagem = filter_input(INPUT_POST, 'linguagem', FILTER_SANITIZE_SPECIAL_CHARS);
             $t -> texto = filter_input(INPUT_POST, 'texto', FILTER_SANITIZE_SPECIAL_CHARS);
+            $t->editar();
 
-            if ($t->editar()){
-                header('Location:index.php');
-                exit;
-            };
+            header('Location:index.php');
+            exit;
         }
 
         $page = 'editarTrecho';
