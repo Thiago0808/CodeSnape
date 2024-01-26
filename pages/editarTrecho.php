@@ -11,12 +11,12 @@
         </div>
         <div class="form-group">
             <label for="exampleFormControlSelect1">Linguagem</label>
-            <select class="form-control" id="exampleFormControlSelect1" name="linguagem" value="<?=$t->linguagem?>">
+            <select class="form-control" id="exampleFormControlSelect1" name="linguagem" >
                 <option>HTML</option>
-                <option>CSS</option>
-                <option>PHP</option>
-                <option>JavaScript</option>
-                <option>MySQL</option>
+                <option <?php if($t->linguagem == "CSS"){echo "selected";}?> >CSS</option>
+                <option <?php if($t->linguagem == "PHP"){echo "selected";}?> >PHP</option>
+                <option <?php if($t->linguagem == "JavaScript"){echo "selected";}?> >JavaScript</option>
+                <option <?php if($t->linguagem == "MySQL"){echo "selected";}?> >MySQL</option>
             </select>
         </div>
         <div class="form-group">
