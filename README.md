@@ -13,5 +13,7 @@ Para utillizar o CodeSnape, é necessário adicionar o codesnape.sql em seu comp
 
 <h1 align="center">Atualizações Futuras</h1>
 
+<h2 align="left">Coleções</h1>
 
+Considerando que muitos trechos trabalham em conjunto, ou são do mesmo projeto, futuramente haverá a possibilidade de criar coleções de trechos, que reúnem os trechos em grupos
 
