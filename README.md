@@ -32,3 +32,8 @@ Uma pessoa poderá ter inúmeros trechos, então para facilitar a localização 
 <h2 align="left">Perfil e Online</h1>
 
 E a maior atualização que pretendo realizar no CodeSnape é possibilitar a criação de perfils, sendo possível compartilhar e visualizar os trechos de outras pessoas.
+
+<h1 align="center">Créditos</h1>
+
+O template utilizado para o Front-End do CodeSnape pertence ao repositório <a href="https://github.com/learning-zone/website-templates">website-templates</a> feito justamente para oferecer templates a outros programadores.
+
