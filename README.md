@@ -17,3 +17,6 @@ Para utillizar o CodeSnape, é necessário adicionar o codesnape.sql em seu comp
 
 Considerando que muitos trechos trabalham em conjunto, ou são do mesmo projeto, futuramente haverá a possibilidade de criar coleções de trechos, que reúnem os trechos em grupos
 
+<h2 align="left">Múltiplas Linguagens</h1>
+
+Uma outra função que será adicionada é a capacidade de adicionar mais de uma linguagem em um mesmo trecho.
