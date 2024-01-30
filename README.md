@@ -28,3 +28,7 @@ Haverá também um sistema de tags personalizadas, que trabalharão junto com o 
 <h2 align="left">Filtros e Campo de Busca</h1>
 
 Uma pessoa poderá ter inúmeros trechos, então para facilitar a localização daquele desejado, será possível pesquisar por nome do trecho, ou filtrar por linguagem.
+
+<h2 align="left">Perfil e Online</h1>
+
+E a maior atualização que pretendo realizar no CodeSnape é possibilitar a criação de perfils, sendo possível compartilhar e visualizar os trechos de outras pessoas.
