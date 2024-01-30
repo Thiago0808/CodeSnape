@@ -20,3 +20,7 @@ Considerando que muitos trechos trabalham em conjunto, ou são do mesmo projeto,
 <h2 align="left">Múltiplas Linguagens</h1>
 
 Uma outra função que será adicionada é a capacidade de adicionar mais de uma linguagem em um mesmo trecho.
+
+<h2 align="left">Filtros e Campo de Busca</h1>
+
+Uma pessoa poderá ter inúmeros trechos, então para facilitar a localização daquele desejado, será possível pesquisar por nome do trecho, ou filtrar por linguagem
