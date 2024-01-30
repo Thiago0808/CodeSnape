@@ -10,3 +10,8 @@ Para utillizar o CodeSnape, é necessário adicionar o codesnape.sql em seu comp
 1ª Forma: Copie o código dentro do arquivo codesnape.sql, e em seu terminal, inicie seu banco de dados com o comando "mysql -u root -p", e então cole o código;
 
 2ª Forma: Baixe o arquivo codesnape.sql, e o importe em alguma ferramenta de banco de dados, como o phpMyAdmin;
+
+<h1 align="center">Atualizações Futuras</h1>
+
+
+
