@@ -21,6 +21,10 @@ Considerando que muitos trechos trabalham em conjunto, ou são do mesmo projeto,
 
 Uma outra função que será adicionada é a capacidade de adicionar mais de uma linguagem em um mesmo trecho.
 
+<h2 align="left">Tags</h1>
+
+Haverá também um sistema de tags personalizadas, que trabalharão junto com o filtro.
+
 <h2 align="left">Filtros e Campo de Busca</h1>
 
-Uma pessoa poderá ter inúmeros trechos, então para facilitar a localização daquele desejado, será possível pesquisar por nome do trecho, ou filtrar por linguagem
+Uma pessoa poderá ter inúmeros trechos, então para facilitar a localização daquele desejado, será possível pesquisar por nome do trecho, ou filtrar por linguagem.
