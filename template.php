@@ -17,6 +17,10 @@
     <!-- Responsive CSS  -->
     <link href="css/responsive.css" rel="stylesheet">
 
+    <!-- Ícone  -->
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+
+
   </head>
 
   <body>
