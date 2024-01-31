@@ -1,4 +1,7 @@
-# CodeSnape
+<div align="center">
+<img style="width: 25%;" src="https://github.com/Thiago0808/CodeSnape/assets/141963700/fdb4643c-c9a5-4804-8596-dae491f34e17" />
+</div>
+
 Sejam bem-vindos ao CodeSnape, onde vocês podem armazenar trechos dos seus códigos mais utilizados, para ter fácil acesso sempre que necessário em seus projetos.
 
 Adicione, edite e delete qualquer trecho, dando a ele um título, e selecionando a linguagem principal. Todos os trechos podem ser visualizados e modificados na página principal.
