@@ -34,7 +34,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">CodeSnape</a>
+          <a class="navbar-brand" href="index.php"><img class="img-fluid logo" src="img/logo_horizontal.png" alt="Logo CodeSnape"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
