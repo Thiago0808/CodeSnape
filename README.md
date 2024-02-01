@@ -1,5 +1,5 @@
 <div align="center">
-<img style="width: 25%;" src="https://github.com/Thiago0808/CodeSnape/assets/141963700/fdb4643c-c9a5-4804-8596-dae491f34e17" />
+<img style="width: 25%;" src="https://github.com/Thiago0808/CodeSnape/assets/141963700/0563959a-8744-4fd8-9dc7-c6e4457c2382" />
 </div>
 
 Sejam bem-vindos ao CodeSnape, onde vocês podem armazenar trechos dos seus códigos mais utilizados, para ter fácil acesso sempre que necessário em seus projetos.
@@ -40,3 +40,6 @@ E a maior atualização que pretendo realizar no CodeSnape é possibilitar a cri
 
 O template utilizado para o Front-End do CodeSnape pertence ao repositório <a href="https://github.com/learning-zone/website-templates">website-templates</a> feito justamente para oferecer templates a outros programadores.
 
+
+
+![logo](https://github.com/Thiago0808/CodeSnape/assets/141963700/0563959a-8744-4fd8-9dc7-c6e4457c2382)
