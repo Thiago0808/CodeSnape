@@ -26,7 +26,7 @@
   <body>
 
     <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-      <div class="container">
+      <div class="container container_nav">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -34,7 +34,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php"><img class="img-fluid logo" src="img/logo_horizontal.png" alt="Logo CodeSnape"></a>
+          <a class="navbar-brand" href="index.php"><img class="img-fluid logo" src="img/horizontal.png" alt="Logo CodeSnape"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
