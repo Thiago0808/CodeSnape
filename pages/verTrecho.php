@@ -8,7 +8,7 @@
         <code><?=$t->texto?></code>
         <br>
         <div class='botoes'>
-          <a href='?p=deletarTrecho&id=<?=$t->id?>><button type='button' class='btn btn-danger'>Deletar</button></a>
+          <a href='?p=deletarTrecho&id=<?=$t->id?>'><button type='button' class='btn btn-dark'>Deletar</button></a>
           <a href='?p=editarTrecho&id=<?=$t->id?>'><button type='button' class='btn btn-info'>Editar</button></a>
         </div>
     </div>
