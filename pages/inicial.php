@@ -19,7 +19,7 @@
       echo "<p>$t->linguagem</p>";
       echo "<div class='botoes'>";
         echo "<a href='?p=deletarTrecho&id=$t->id'><button type='button' class='btn btn-dark'>Deletar</button></a>";
-        echo "<a href='?p=editarTrecho&id=$t->id'><button type='button' class='btn btn-info'>Editar</button></a>";
+        echo "<a href='?p=editarTrecho&id=$t->id'><button type='button' class='btn btn-outline-dark'>Editar</button></a>";
       echo "</div>";  
     echo "</div>";
   }
