@@ -36,3 +36,7 @@ code{
 	display: flex;
 	align-items: center;
 }
+
+a, a:hover{
+	color: black;
+}
