@@ -14,6 +14,10 @@ Para utillizar o CodeSnape, é necessário adicionar o codesnape.sql em seu comp
 
 2ª Forma: Baixe o arquivo codesnape.sql, e o importe em alguma ferramenta de banco de dados, como o phpMyAdmin;
 
+<div align="center">
+<video style="width: 80%;" src="https://github.com/Thiago0808/CodeSnape/assets/141963700/793169e4-9d88-47d6-8c2b-b8bcb1e770ca"/>
+</div>
+
 <h1 align="center">Atualizações Futuras</h1>
 
 <h2 align="left">Coleções</h1>
@@ -37,5 +41,6 @@ Uma pessoa poderá ter inúmeros trechos, então para facilitar a localização 
 E a maior atualização que pretendo realizar no CodeSnape é possibilitar a criação de perfils, sendo possível compartilhar e visualizar os trechos de outras pessoas.
 
 <h1 align="center">Créditos</h1>
+
 
 O template utilizado para o Front-End do CodeSnape pertence ao repositório <a href="https://github.com/learning-zone/website-templates">website-templates</a> feito justamente para oferecer templates a outros programadores.
