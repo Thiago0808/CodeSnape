@@ -39,7 +39,3 @@ E a maior atualização que pretendo realizar no CodeSnape é possibilitar a cri
 <h1 align="center">Créditos</h1>
 
 O template utilizado para o Front-End do CodeSnape pertence ao repositório <a href="https://github.com/learning-zone/website-templates">website-templates</a> feito justamente para oferecer templates a outros programadores.
-
-
-
-![logo](https://github.com/Thiago0808/CodeSnape/assets/141963700/0563959a-8744-4fd8-9dc7-c6e4457c2382)
