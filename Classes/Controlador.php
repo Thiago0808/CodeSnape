@@ -23,14 +23,11 @@ class Controlador{
         require 'template.php';
     }
 
-    // TODO
-
-
     function novoTrecho(){
         if (filter_input(INPUT_POST, 'texto')){
             $t = new Trecho();
             $t -> titulo = filter_input(INPUT_POST, 'titulo', FILTER_SANITIZE_SPECIAL_CHARS);
-            $t -> linguagem = filter_input(INPUT_POST, 'linguagem', FILTER_SANITIZE_SPECIAL_CHARS);
+            $t->linguagens = filter_input(INPUT_POST, 'linguagem', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
             $t -> texto = filter_input(INPUT_POST, 'texto', FILTER_SANITIZE_SPECIAL_CHARS);
 
             if ($t->salvar()){
@@ -70,13 +67,14 @@ class Controlador{
         if (filter_input(INPUT_GET, 'id')){
             $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
             $t = new Trecho($id);
+            $selecionadas = array_map('trim', explode(',', $t->linguagens));
         }
 
         if (filter_input(INPUT_POST, 'texto')){
             $t = new Trecho();
             $t->id = $id;
             $t -> titulo = filter_input(INPUT_POST, 'titulo', FILTER_SANITIZE_SPECIAL_CHARS);
-            $t -> linguagem = filter_input(INPUT_POST, 'linguagem', FILTER_SANITIZE_SPECIAL_CHARS);
+            $t->linguagens = filter_input(INPUT_POST, 'linguagem', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
             $t -> texto = filter_input(INPUT_POST, 'texto', FILTER_SANITIZE_SPECIAL_CHARS);
             $t->editar();
 
