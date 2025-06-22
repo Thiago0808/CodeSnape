@@ -4,7 +4,7 @@
 
 Sejam bem-vindos ao CodeSnape, onde vocês podem armazenar trechos dos seus códigos mais utilizados, para ter fácil acesso sempre que necessário em seus projetos.
 
-Adicione, edite e delete qualquer trecho, dando a ele um título, e selecionando a linguagem principal. Todos os trechos podem ser visualizados e modificados na página principal.
+Adicione, edite e delete qualquer trecho, dando a ele um título, e selecionando suas linguagens. Todos os trechos podem ser visualizados e modificados na página principal.
 
 <h1 align="center">Instruções de Uso</h1>
 
@@ -19,14 +19,6 @@ Para utillizar o CodeSnape, é necessário adicionar o codesnape.sql em seu comp
 </div>
 
 <h1 align="center">Atualizações Futuras</h1>
-
-<h2 align="left">Coleções</h1>
-
-Considerando que muitos trechos trabalham em conjunto, ou são do mesmo projeto, futuramente haverá a possibilidade de criar coleções de trechos, que reúnem os trechos em grupos
-
-<h2 align="left">Múltiplas Linguagens</h1>
-
-Uma outra função que será adicionada é a capacidade de adicionar mais de uma linguagem em um mesmo trecho.
 
 <h2 align="left">Tags</h1>
 
