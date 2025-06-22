@@ -7,28 +7,28 @@
     <form action="" method="post">
         <div class="form-group">
             <label for="exampleFormControlInput1">Nome do Trecho:</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Titulo" name="titulo" value="<?=$t->titulo?> required">
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Titulo" name="titulo" value="<?=$t->titulo?>" required>
         </div>
         <div class="form-group">
             <label for="exampleFormControlSelect1">Linguagem</label>
             <select id="multi-select" name="linguagem[]" multiple required>
-                <option <?php if(in_array("HTML", $selecionadas)) echo "selected"; ?>>HTML</option>
-                <option <?php if(in_array("CSS", $selecionadas)) echo "selected"; ?>>CSS</option>
-                <option <?php if(in_array("PHP", $selecionadas)) echo "selected"; ?>>PHP</option>
-                <option <?php if(in_array("JavaScript", $selecionadas)) echo "selected"; ?>>JavaScript</option>
-                <option <?php if(in_array("MySQL", $selecionadas)) echo "selected"; ?>>MySQL</option>
-                <option <?php if(in_array("TypeScript", $selecionadas)) echo "selected"; ?>>TypeScript</option>
-                <option <?php if(in_array("Python", $selecionadas)) echo "selected"; ?>>Python</option>
-                <option <?php if(in_array("Java", $selecionadas)) echo "selected"; ?>>Java</option>
-                <option <?php if(in_array("C", $selecionadas)) echo "selected"; ?>>C</option>
-                <option <?php if(in_array("C++", $selecionadas)) echo "selected"; ?>>C++</option>
-                <option <?php if(in_array("C#", $selecionadas)) echo "selected"; ?>>C#</option>
-                <option <?php if(in_array("Ruby", $selecionadas)) echo "selected"; ?>>Ruby</option>
-                <option <?php if(in_array("Go", $selecionadas)) echo "selected"; ?>>Go</option>
-                <option <?php if(in_array("Rust", $selecionadas)) echo "selected"; ?>>Rust</option>
-                <option <?php if(in_array("Kotlin", $selecionadas)) echo "selected"; ?>>Kotlin</option>
-                <option <?php if(in_array("Shell", $selecionadas)) echo "selected"; ?>>Shell</option>
                 <option <?php if(in_array("Bash", $selecionadas)) echo "selected"; ?>>Bash</option>
+                <option <?php if(in_array("C", $selecionadas)) echo "selected"; ?>>C</option>
+                <option <?php if(in_array("C#", $selecionadas)) echo "selected"; ?>>C#</option>
+                <option <?php if(in_array("C++", $selecionadas)) echo "selected"; ?>>C++</option>
+                <option <?php if(in_array("CSS", $selecionadas)) echo "selected"; ?>>CSS</option>
+                <option <?php if(in_array("Go", $selecionadas)) echo "selected"; ?>>Go</option>
+                <option <?php if(in_array("HTML", $selecionadas)) echo "selected"; ?>>HTML</option>
+                <option <?php if(in_array("Java", $selecionadas)) echo "selected"; ?>>Java</option>
+                <option <?php if(in_array("JavaScript", $selecionadas)) echo "selected"; ?>>JavaScript</option>
+                <option <?php if(in_array("Kotlin", $selecionadas)) echo "selected"; ?>>Kotlin</option>
+                <option <?php if(in_array("MySQL", $selecionadas)) echo "selected"; ?>>MySQL</option>
+                <option <?php if(in_array("PHP", $selecionadas)) echo "selected"; ?>>PHP</option>
+                <option <?php if(in_array("Python", $selecionadas)) echo "selected"; ?>>Python</option>
+                <option <?php if(in_array("Ruby", $selecionadas)) echo "selected"; ?>>Ruby</option>
+                <option <?php if(in_array("Rust", $selecionadas)) echo "selected"; ?>>Rust</option>
+                <option <?php if(in_array("Shell", $selecionadas)) echo "selected"; ?>>Shell</option>
+                <option <?php if(in_array("TypeScript", $selecionadas)) echo "selected"; ?>>TypeScript</option>
             </select>
         </div>
         <div class="form-group">

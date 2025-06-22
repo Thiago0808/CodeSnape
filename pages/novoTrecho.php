@@ -12,30 +12,30 @@
         <div class="form-group">
             <label for="exampleFormControlSelect1">Linguagem</label>
             <select id="multi-select" name="linguagem[]" multiple required>
-                <option>HTML</option>
-                <option>CSS</option>
-                <option>PHP</option>
-                <option>JavaScript</option>
-                <option>MySQL</option>
-                <option>TypeScript</option>
-                <option>Python</option>
-                <option>Java</option>
-                <option>C</option>
-                <option>C++</option>
-                <option>C#</option>
-                <option>Ruby</option>
-                <option>Go</option>
-                <option>Rust</option>
-                <option>Kotlin</option>
-                <option>Shell</option>
                 <option>Bash</option>
+                <option>C</option>
+                <option>C#</option>
+                <option>C++</option>
+                <option>CSS</option>
+                <option>Go</option>
+                <option>HTML</option>
+                <option>Java</option>
+                <option>JavaScript</option>
+                <option>Kotlin</option>
+                <option>MySQL</option>
+                <option>PHP</option>
+                <option>Python</option>
+                <option>Ruby</option>
+                <option>Rust</option>
+                <option>Shell</option>
+                <option>TypeScript</option>
             </select>
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Trecho</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name="texto" required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Salvar</button>
+        <button type="submit" class="btn btn-dark">Salvar</button>
     </form>
 </div>
 

@@ -12,12 +12,19 @@ class Controlador{
         #definr a página
         $page = "inicial";
 
-        $trechos = Trecho::lista();
+        $filtroTitulo = filter_input(INPUT_POST, 'titulo', FILTER_SANITIZE_SPECIAL_CHARS);
+        $filtroLinguagens = filter_input(INPUT_POST, 'linguagem', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
+
+        if (!$filtroLinguagens){
+            $filtroLinguagens = [];
+        }
+
+
+        $trechos = Trecho::lista($filtroTitulo, $filtroLinguagens);
 
         foreach ($trechos as $t){
             $t->texto = str_replace("&#13;&#10;", "<br />", $t->texto);
         }
-
 
         # Incorporar o Template
         require 'template.php';

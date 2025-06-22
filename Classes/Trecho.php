@@ -79,11 +79,31 @@ class Trecho{
             return true;
     }
 
-    static function lista(){
+    static function lista($filtroTitulo=null, $filtroLinguagens=null){
         $conn = new Conexao();
+
+        $whereOrAnd = ' WHERE ';
+
+        $sqlTitulo = '';
+        if ($filtroTitulo){
+            $sqlTitulo = "$whereOrAnd trecho.titulo LIKE '%$filtroTitulo%' ";
+            $whereOrAnd = ' AND ';
+        }
+
+        $sqlLinguagens = '';
+        if ($filtroLinguagens) {
+            $ids = implode("','", $filtroLinguagens);
+            $sqlLinguagens = "$whereOrAnd trecho.id IN (
+                SELECT trecho_id FROM linguagem WHERE nome IN ('$ids')
+            )";
+            $whereOrAnd = ' AND ';
+        }
+
         $sql = "SELECT trecho.*, GROUP_CONCAT(linguagem.nome SEPARATOR ', ') as linguagens
                 FROM trecho
                 LEFT JOIN linguagem ON linguagem.trecho_id = trecho.id
+                $sqlTitulo
+                $sqlLinguagens
                 GROUP BY trecho.id
                 ORDER BY trecho.id DESC";
         $stmt = $conn->query($sql);
