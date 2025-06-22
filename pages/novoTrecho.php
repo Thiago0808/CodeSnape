@@ -17,6 +17,18 @@
                 <option>PHP</option>
                 <option>JavaScript</option>
                 <option>MySQL</option>
+                <option>TypeScript</option>
+                <option>Python</option>
+                <option>Java</option>
+                <option>C</option>
+                <option>C++</option>
+                <option>C#</option>
+                <option>Ruby</option>
+                <option>Go</option>
+                <option>Rust</option>
+                <option>Kotlin</option>
+                <option>Shell</option>
+                <option>Bash</option>
             </select>
         </div>
         <div class="form-group">
