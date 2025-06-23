@@ -23,6 +23,10 @@ switch ($p) {
     case 'deletarTrecho':
         $c->deletarTrecho();
         break;
+
+    case 'inicialTag':
+        $c->inicialTag();
+        break;
     
     default:
         $c->inicial();

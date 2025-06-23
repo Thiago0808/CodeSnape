@@ -92,4 +92,17 @@ class Controlador{
         $page = 'editarTrecho';
         require 'template.php';
     }
+
+    #Tags
+    function inicialTag(){
+        #definr a página
+        $page = "inicialTag";
+
+        $filtroTitulo = filter_input(INPUT_POST, 'titulo', FILTER_SANITIZE_SPECIAL_CHARS);
+
+        $tags = Tag::lista($filtroTitulo);
+
+        # Incorporar o Template
+        require 'template.php';
+    }
 }

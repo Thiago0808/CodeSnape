@@ -44,3 +44,27 @@ code{
 a, a:hover{
 	color: black;
 }
+
+.tag {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  margin: 5px 0;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  word-break: break-word;
+}
+
+.tag-pequena {
+  font-size: 0.9rem;
+  padding: 6px 12px;
+}
+
+.tag-grande {
+  font-size: 1.1rem;
+  padding: 8px 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 12px;
+}
