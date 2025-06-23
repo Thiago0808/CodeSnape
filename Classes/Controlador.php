@@ -105,4 +105,15 @@ class Controlador{
         # Incorporar o Template
         require 'template.php';
     }
+
+    function deletarTag(){
+        if (filter_input(INPUT_GET, 'id')){
+            $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+            $t = new Tag($id);
+            $t->deletar();
+        }
+
+        header('Location:index.php?p=inicialTag');
+        exit;
+    }
 }
