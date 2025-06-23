@@ -27,6 +27,10 @@ switch ($p) {
     case 'inicialTag':
         $c->inicialTag();
         break;
+    
+    case 'novaTag':
+        $c->novaTag();
+        break;
 
     case 'deletarTag':
         $c->deletarTag();

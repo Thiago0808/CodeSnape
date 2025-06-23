@@ -106,6 +106,22 @@ class Controlador{
         require 'template.php';
     }
 
+    function novaTag(){
+        if (filter_input(INPUT_POST, 'tag')){
+            $t = new Tag();
+            $t -> tag = filter_input(INPUT_POST, 'tag', FILTER_SANITIZE_SPECIAL_CHARS);
+            $t -> color = filter_input(INPUT_POST, 'color', FILTER_SANITIZE_SPECIAL_CHARS);
+
+            if ($t->salvar()){
+                header('Location:index.php?p=inicialTag');
+                exit;
+            };
+        }
+
+        $page = 'novaTag';
+        require 'template.php';
+    }
+
     function deletarTag(){
         if (filter_input(INPUT_GET, 'id')){
             $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);

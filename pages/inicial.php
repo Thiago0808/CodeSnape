@@ -7,7 +7,7 @@
   <form action="" method="post">
     <div class="form-group">
       <label for="exampleFormControlInput1">Filtrar por Nome:</label>
-      <input type="text" class="filter-name form-control" id="exampleFormControlInput1" placeholder="Titulo" name="titulo" maxlength="24"
+      <input type="text" class="short-input form-control" id="exampleFormControlInput1" placeholder="Titulo" name="titulo" maxlength="24"
         value="<?php echo isset($_POST['titulo']) ? htmlspecialchars($_POST['titulo']) : ''; ?>">
     </div>
     <div class="form-group">
