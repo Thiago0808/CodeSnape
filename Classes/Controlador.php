@@ -98,9 +98,9 @@ class Controlador{
         #definr a página
         $page = "inicialTag";
 
-        $filtroTitulo = filter_input(INPUT_POST, 'titulo', FILTER_SANITIZE_SPECIAL_CHARS);
+        $filtroTag = filter_input(INPUT_POST, 'tag', FILTER_SANITIZE_SPECIAL_CHARS);
 
-        $tags = Tag::lista($filtroTitulo);
+        $tags = Tag::lista($filtroTag);
 
         # Incorporar o Template
         require 'template.php';

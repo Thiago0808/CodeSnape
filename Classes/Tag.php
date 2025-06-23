@@ -46,10 +46,16 @@ class Tag{
             return true;
     }
 
-    static function lista(){
+    static function lista($filtroTag=null){
         $conn = new Conexao();
 
-        $sql = "SELECT * FROM tag";
+        $sqlFiltro = '';
+        if ($filtroTag){
+            $sqlFiltro = "WHERE tag.tag LIKE '%$filtroTag%' ";
+        }
+
+
+        $sql = "SELECT * FROM tag $sqlFiltro";
         $stmt = $conn->query($sql);
 
         # Arrary de objetos Texto
