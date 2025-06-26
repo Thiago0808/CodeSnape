@@ -3,7 +3,7 @@
 
   <div class="col-lg-12 tags-header">
     <h1 class="page-header">Minhas Tags</h1>
-    <a href='?p=novaTag' class="page-header no-border"><button type='button' class='btn btn-outline-dark'>+</button></a>
+    <a href='?p=novaTag' class="page-header no-border"><button type='button' class='btn btn-dark'><strong>+</strong></button></a>
   </div>
 
   <form action="" method="post">

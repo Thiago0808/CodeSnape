@@ -72,7 +72,7 @@
           }
         }
       }
-      
+
       echo "<div class='botoes'>";
         echo "<a href='?p=deletarTrecho&id=$t->id'><button type='button' class='btn btn-dark'>Deletar</button></a>";
         echo "<a href='?p=editarTrecho&id=$t->id'><button type='button' class='btn btn-outline-dark'>Editar</button></a>";
@@ -80,24 +80,6 @@
     echo "</div>";
   }
   ?>
-
-</div>
-
-<hr>
-
-<div class="row text-center">
-  
-  <div class="col-lg-12">
-    <ul class="pagination">
-      <li><a href="#">&laquo;</a></li>
-      <li class="active"><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li><a href="#">5</a></li>
-      <li><a href="#">&raquo;</a></li>
-    </ul>        
-  </div>
 
 </div>
 
