@@ -8,6 +8,7 @@ class Trecho{
     public $titulo;
     public $linguagens;
     public $texto;
+    public $tags;
 
 
 
@@ -44,6 +45,10 @@ class Trecho{
         }
         foreach ($this->linguagens as $linguagem) {
             $sql = "INSERT INTO linguagem (nome, trecho_id) VALUES ('$linguagem', '$this->id' )";
+            $r = $conn->query($sql);
+        }
+        foreach ($this->tags as $tag) {
+            $sql = "INSERT INTO tag_trecho (tag_id, trecho_id) VALUES ($tag, '$this->id' )";
             $r = $conn->query($sql);
         }
         return true;

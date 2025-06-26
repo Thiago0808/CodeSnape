@@ -10,8 +10,8 @@
             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Titulo" name="titulo" maxlength="24" required>
         </div>
         <div class="form-group">
-            <label for="exampleFormControlSelect1">Linguagem</label>
-            <select id="multi-select" name="linguagem[]" multiple required>
+            <label for="exampleFormControlSelect1">Linguagens:</label>
+            <select id="multi-select-language" name="linguagem[]" multiple required>
                 <option>Bash</option>
                 <option>C</option>
                 <option>C#</option>
@@ -32,6 +32,14 @@
             </select>
         </div>
         <div class="form-group">
+            <label for="exampleFormControlSelect1">Tags:</label>
+            <select id="multi-select-tag" name="tag[]" multiple>
+                <?php foreach ($tags as $tag): ?>
+                    <option value="<?= $tag->id ?>"><?= $tag->tag ?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+        <div class="form-group">
             <label for="exampleFormControlTextarea1">Trecho</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name="texto" required></textarea>
         </div>
@@ -41,11 +49,22 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const element = document.getElementById('multi-select');
+    const element = document.getElementById('multi-select-language');
     const choices = new Choices(element, {
       removeItemButton: true,
       searchEnabled: true,
       placeholderValue: 'Selecione as linguagens',
+      noResultsText: 'Nenhum resultado',
+      itemSelectText: '',
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const element = document.getElementById('multi-select-tag');
+    const choices = new Choices(element, {
+      removeItemButton: true,
+      searchEnabled: true,
+      placeholderValue: 'Selecione as tags',
       noResultsText: 'Nenhum resultado',
       itemSelectText: '',
     });

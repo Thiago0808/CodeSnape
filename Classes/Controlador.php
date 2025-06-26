@@ -31,11 +31,14 @@ class Controlador{
     }
 
     function novoTrecho(){
+        $tags = Tag::lista();
+
         if (filter_input(INPUT_POST, 'texto')){
             $t = new Trecho();
             $t -> titulo = filter_input(INPUT_POST, 'titulo', FILTER_SANITIZE_SPECIAL_CHARS);
             $t->linguagens = filter_input(INPUT_POST, 'linguagem', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
             $t -> texto = filter_input(INPUT_POST, 'texto', FILTER_SANITIZE_SPECIAL_CHARS);
+            $t->tags = filter_input(INPUT_POST, 'tag', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
 
             if ($t->salvar()){
                 header('Location:index.php');

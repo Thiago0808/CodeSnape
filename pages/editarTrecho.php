@@ -10,7 +10,7 @@
             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Titulo" name="titulo" value="<?=$t->titulo?>" required>
         </div>
         <div class="form-group">
-            <label for="exampleFormControlSelect1">Linguagem</label>
+            <label for="exampleFormControlSelect1">Linguagens:</label>
             <select id="multi-select" name="linguagem[]" multiple required>
                 <option <?php if(in_array("Bash", $selecionadas)) echo "selected"; ?>>Bash</option>
                 <option <?php if(in_array("C", $selecionadas)) echo "selected"; ?>>C</option>
