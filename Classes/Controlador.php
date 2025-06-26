@@ -11,16 +11,22 @@ class Controlador{
     function inicial(){
         #definr a página
         $page = "inicial";
+        $tags = Tag::lista();
 
         $filtroTitulo = filter_input(INPUT_POST, 'titulo', FILTER_SANITIZE_SPECIAL_CHARS);
         $filtroLinguagens = filter_input(INPUT_POST, 'linguagem', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
+        $filtroTags = filter_input(INPUT_POST, 'tag', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
 
         if (!$filtroLinguagens){
             $filtroLinguagens = [];
         }
 
+        if (!$filtroTags){
+            $filtroTags = [];
+        }
 
-        $trechos = Trecho::lista($filtroTitulo, $filtroLinguagens);
+
+        $trechos = Trecho::lista($filtroTitulo, $filtroLinguagens, $filtroTags);
 
         foreach ($trechos as $t){
             $t->texto = str_replace("&#13;&#10;", "<br />", $t->texto);

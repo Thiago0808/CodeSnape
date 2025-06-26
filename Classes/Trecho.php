@@ -83,16 +83,30 @@ class Trecho{
             $stmt = $conn->query($sql);
             $tagsBanco = $stmt->fetchAll(\PDO::FETCH_COLUMN);
 
-            $inserir = array_diff($this->tags, $tagsBanco);
-            foreach ($inserir as $tag) {
-                $sql = "INSERT INTO tag_trecho (tag_id, trecho_id) VALUES ('$tag', '$this->id' )";
-                $conn->query($sql);
+            if ($tagsBanco){
+                $inserir = array_diff($this->tags, $tagsBanco);
+                $deletar = array_diff($tagsBanco, $this->tags);
             }
 
-            $deletar = array_diff($tagsBanco, $this->tags);
-            foreach ($deletar as $tag) {
-                $sql = "DELETE FROM tag_trecho WHERE tag_id=$tag AND trecho_id='$this->id'";
-                $conn->query($sql);
+            if ($tagsBanco){
+                foreach ($inserir as $tag) {
+                    $sql = "INSERT INTO tag_trecho (tag_id, trecho_id) VALUES ('$tag', '$this->id' )";
+                    $conn->query($sql);
+                }
+            }
+            else{
+                foreach ($this->tags as $tag) {
+                    $sql = "INSERT INTO tag_trecho (tag_id, trecho_id) VALUES ('$tag', '$this->id' )";
+                    $conn->query($sql);
+                }
+            }
+
+
+            if ($deletar){
+                foreach ($deletar as $tag) {
+                    $sql = "DELETE FROM tag_trecho WHERE tag_id=$tag AND trecho_id='$this->id'";
+                    $conn->query($sql);
+                }
             }
 
             return true;
@@ -106,7 +120,7 @@ class Trecho{
             return true;
     }
 
-    static function lista($filtroTitulo=null, $filtroLinguagens=null){
+    static function lista($filtroTitulo=null, $filtroLinguagens=null, $filtroTags=null){
         $conn = new Conexao();
 
         $whereOrAnd = ' WHERE ';
@@ -126,13 +140,27 @@ class Trecho{
             $whereOrAnd = ' AND ';
         }
 
-        $sql = "SELECT trecho.*, GROUP_CONCAT(linguagem.nome SEPARATOR ', ') as linguagens
-                FROM trecho
-                LEFT JOIN linguagem ON linguagem.trecho_id = trecho.id
-                $sqlTitulo
-                $sqlLinguagens
-                GROUP BY trecho.id
-                ORDER BY trecho.id DESC";
+        $sqlTags = '';
+        if ($filtroTags) {
+            $ids = implode("','", $filtroTags);
+            $sqlTags = "$whereOrAnd trecho.id IN (
+                SELECT trecho_id FROM tag_trecho WHERE tag_id IN ('$ids')
+            )";
+            $whereOrAnd = ' AND ';
+        }
+
+        $sql = "
+            SELECT trecho.*, GROUP_CONCAT(DISTINCT linguagem.nome SEPARATOR ', ') AS linguagens
+            FROM trecho
+            LEFT JOIN linguagem ON linguagem.trecho_id = trecho.id
+            LEFT JOIN tag_trecho ON tag_trecho.trecho_id = trecho.id
+            $sqlTags
+            $sqlTitulo
+            $sqlLinguagens
+            GROUP BY trecho.id
+            ORDER BY trecho.id DESC
+        ";
+        
         $stmt = $conn->query($sql);
 
         # Arrary de objetos Texto

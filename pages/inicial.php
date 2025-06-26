@@ -11,8 +11,8 @@
         value="<?php echo isset($_POST['titulo']) ? htmlspecialchars($_POST['titulo']) : ''; ?>">
     </div>
     <div class="form-group">
-      <label for="exampleFormControlSelect1">Filtrar por Linguagem:</label>
-      <select id="multi-select" name="linguagem[]" multiple>
+      <label for="exampleFormControlSelect1">Filtrar por Linguagens:</label>
+      <select id="multi-select-language" name="linguagem[]" multiple>
         <option <?php if(in_array("Bash", $filtroLinguagens)) echo "selected"; ?>>Bash</option>
         <option <?php if(in_array("C", $filtroLinguagens)) echo "selected"; ?>>C</option>
         <option <?php if(in_array("C#", $filtroLinguagens)) echo "selected"; ?>>C#</option>
@@ -31,6 +31,14 @@
         <option <?php if(in_array("Shell", $filtroLinguagens)) echo "selected"; ?>>Shell</option>
         <option <?php if(in_array("TypeScript", $filtroLinguagens)) echo "selected"; ?>>TypeScript</option>
       </select>
+    </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Filtrar por Tags:</label>
+        <select id="multi-select-tag" name="tag[]" multiple>
+            <?php foreach ($tags as $tag): ?>
+                <option <?php if(in_array("$tag->id", $filtroTags)) echo "selected"; ?> value="<?= $tag->id ?>"><?= $tag->tag ?></option>
+            <?php endforeach; ?>
+        </select>
     </div>
     <div>
       <button type="submit" class="btn btn-dark">Filtrar</button>
@@ -79,11 +87,22 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const element = document.getElementById('multi-select');
+    const element = document.getElementById('multi-select-language');
     const choices = new Choices(element, {
       removeItemButton: true,
       searchEnabled: true,
       placeholderValue: 'Selecione as linguagens',
+      noResultsText: 'Nenhum resultado',
+      itemSelectText: '',
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const element = document.getElementById('multi-select-tag');
+    const choices = new Choices(element, {
+      removeItemButton: true,
+      searchEnabled: true,
+      placeholderValue: 'Selecione as tags',
       noResultsText: 'Nenhum resultado',
       itemSelectText: '',
     });
