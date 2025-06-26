@@ -57,6 +57,8 @@ class Controlador{
     }
 
     function verTrecho(){
+        $tags = Tag::lista();
+
         if (filter_input(INPUT_GET, 'id')){
             $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
             $t = new Trecho($id);

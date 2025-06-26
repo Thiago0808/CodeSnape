@@ -150,7 +150,7 @@ class Trecho{
         }
 
         $sql = "
-            SELECT trecho.*, GROUP_CONCAT(DISTINCT linguagem.nome SEPARATOR ', ') AS linguagens
+            SELECT trecho.*, GROUP_CONCAT(DISTINCT linguagem.nome SEPARATOR ', ') AS linguagens, GROUP_CONCAT(DISTINCT tag_trecho.tag_id) AS tag_ids
             FROM trecho
             LEFT JOIN linguagem ON linguagem.trecho_id = trecho.id
             LEFT JOIN tag_trecho ON tag_trecho.trecho_id = trecho.id
@@ -162,9 +162,13 @@ class Trecho{
         ";
         
         $stmt = $conn->query($sql);
+        $resultado = $stmt->fetchAll(\PDO::FETCH_CLASS, "\CodeSnape\Classes\Trecho");
 
-        # Arrary de objetos Texto
-        return $stmt->fetchAll(\PDO::FETCH_CLASS, "\CodeSnape\Classes\Trecho");
+        foreach ($resultado as $trecho) {
+            $trecho->tag_ids = $trecho->tag_ids ? array_map('intval', explode(',', $trecho->tag_ids)) : [];
+        }
+
+        return $resultado;
     }
 
 }

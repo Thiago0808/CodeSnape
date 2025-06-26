@@ -52,11 +52,27 @@
 <div class="row">
 
   <?php
+  $tagsMap = [];
+  foreach ($tags as $tag) {
+      $tagsMap[$tag->id] = $tag;
+  }
+
   foreach ($trechos as $t){
     echo "<div class='col-md-4 portfolio-item'>";
       echo "<code class='code_inicial'>$t->texto</code>";
       echo "<h3><a href='?p=verTrecho&id=$t->id'>$t->titulo</a></h3>";
       echo "<p>$t->linguagens</p>";
+
+      
+      if (!empty($t->tag_ids)) {
+        foreach ($t->tag_ids as $tagId) {
+          if (isset($tagsMap[$tagId])) {
+            $tagObj = $tagsMap[$tagId];
+            echo "<h4 class='tag tag-pequena' style='background-color: {$tagObj->color}'>" . htmlspecialchars($tagObj->tag) . "</h4>";
+          }
+        }
+      }
+      
       echo "<div class='botoes'>";
         echo "<a href='?p=deletarTrecho&id=$t->id'><button type='button' class='btn btn-dark'>Deletar</button></a>";
         echo "<a href='?p=editarTrecho&id=$t->id'><button type='button' class='btn btn-outline-dark'>Editar</button></a>";

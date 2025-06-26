@@ -58,8 +58,9 @@ a, a:hover{
 }
 
 .tag-pequena {
-  font-size: 0.9rem;
+  font-size: 1rem;
   padding: 6px 12px;
+  margin-right: 5px;
 }
 
 .tag-grande {
