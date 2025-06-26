@@ -1,7 +1,7 @@
 <div class="row">
 
     <div class="col-lg-12">
-        <h1 class="page-header">Adicionar <small>Novo Trecho</small></h1>
+        <h1 class="page-header">Editar <small>Trecho</small></h1>
     </div>
     
     <form action="" method="post">

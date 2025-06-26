@@ -43,7 +43,7 @@
       echo "<h3 class='tag tag-grande' style='background-color: $t->color; color: $corTexto;'>$t->tag</h3>";
       echo "<div class='botoes'>";
         echo "<a href='?p=deletarTag&id=$t->id'><button type='button' class='btn btn-dark'>Deletar</button></a>";
-        echo "<a href='?p=editarTrecho&id=$t->id'><button type='button' class='btn btn-outline-dark'>Editar</button></a>";
+        echo "<a href='?p=editarTag&id=$t->id'><button type='button' class='btn btn-outline-dark'>Editar</button></a>";
       echo "</div>";  
     echo "</div>";
   }

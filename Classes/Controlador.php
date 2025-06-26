@@ -132,4 +132,26 @@ class Controlador{
         header('Location:index.php?p=inicialTag');
         exit;
     }
+
+    function editarTag(){
+
+        if (filter_input(INPUT_GET, 'id')){
+            $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+            $t = new Tag($id);
+        }
+
+        if (filter_input(INPUT_POST, 'tag')){
+            $t = new Tag();
+            $t->id = $id;
+            $t -> tag = filter_input(INPUT_POST, 'tag', FILTER_SANITIZE_SPECIAL_CHARS);
+            $t -> color = filter_input(INPUT_POST, 'color', FILTER_SANITIZE_SPECIAL_CHARS);
+            $t->editar();
+
+            header('Location:index.php?p=inicialTag');
+            exit;
+        }
+
+        $page = 'editarTag';
+        require 'template.php';
+    }
 }
