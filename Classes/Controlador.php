@@ -74,6 +74,7 @@ class Controlador{
 
     function editarTrecho(){
 
+        $tags = Tag::lista();
         if (filter_input(INPUT_GET, 'id')){
             $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
             $t = new Trecho($id);
@@ -86,6 +87,7 @@ class Controlador{
             $t -> titulo = filter_input(INPUT_POST, 'titulo', FILTER_SANITIZE_SPECIAL_CHARS);
             $t->linguagens = filter_input(INPUT_POST, 'linguagem', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
             $t -> texto = filter_input(INPUT_POST, 'texto', FILTER_SANITIZE_SPECIAL_CHARS);
+            $t->tags = filter_input(INPUT_POST, 'tag', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
             $t->editar();
 
             header('Location:index.php');

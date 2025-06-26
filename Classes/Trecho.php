@@ -23,11 +23,14 @@ class Trecho{
                                     GROUP BY trecho.id
                                     ORDER BY trecho.id DESC"
                             )->fetch();
+            $tags = $conn->query("SELECT tag_id FROM tag_trecho WHERE trecho_id=$id ORDER BY tag_id");
+            $selectedTagIds = $tags->fetchAll(\PDO::FETCH_COLUMN); 
             if ($trecho){
                 $this->id=$trecho['id'];
                 $this->titulo=$trecho['titulo'];
                 $this->linguagens=$trecho['linguagens'];
                 $this->texto=$trecho['texto'];
+                $this->tags=$selectedTagIds;
             } 
             else{
                 die ('Registro não Encontrado');
@@ -58,6 +61,7 @@ class Trecho{
             $conn = new Conexao();
             $conn->query("UPDATE `trecho` SET `titulo`='$this->titulo', `texto`='$this->texto' WHERE id=$this->id")->fetch();
 
+            #Linguagens
             $sql = "SELECT nome FROM linguagem WHERE trecho_id=$this->id";
             $stmt = $conn->query($sql);
             $linguagensBanco = $stmt->fetchAll(\PDO::FETCH_COLUMN);
@@ -74,12 +78,30 @@ class Trecho{
                 $conn->query($sql);
             }
 
+            #Tags
+            $sql = "SELECT tag_id FROM tag_trecho WHERE trecho_id=$this->id";
+            $stmt = $conn->query($sql);
+            $tagsBanco = $stmt->fetchAll(\PDO::FETCH_COLUMN);
+
+            $inserir = array_diff($this->tags, $tagsBanco);
+            foreach ($inserir as $tag) {
+                $sql = "INSERT INTO tag_trecho (tag_id, trecho_id) VALUES ('$tag', '$this->id' )";
+                $conn->query($sql);
+            }
+
+            $deletar = array_diff($tagsBanco, $this->tags);
+            foreach ($deletar as $tag) {
+                $sql = "DELETE FROM tag_trecho WHERE tag_id=$tag AND trecho_id='$this->id'";
+                $conn->query($sql);
+            }
+
             return true;
     }
 
     function deletar(){
             $conn = new Conexao();
             $conn->query("DELETE FROM linguagem WHERE trecho_id=$this->id")->fetch();
+            $conn->query("DELETE FROM tag_trecho WHERE tag_id=$this->id")->fetch();
             $conn->query("DELETE FROM trecho WHERE id=$this->id")->fetch();
             return true;
     }

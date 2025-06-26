@@ -11,7 +11,7 @@
         </div>
         <div class="form-group">
             <label for="exampleFormControlSelect1">Linguagens:</label>
-            <select id="multi-select" name="linguagem[]" multiple required>
+            <select id="multi-select-language" name="linguagem[]" multiple required>
                 <option <?php if(in_array("Bash", $selecionadas)) echo "selected"; ?>>Bash</option>
                 <option <?php if(in_array("C", $selecionadas)) echo "selected"; ?>>C</option>
                 <option <?php if(in_array("C#", $selecionadas)) echo "selected"; ?>>C#</option>
@@ -32,6 +32,14 @@
             </select>
         </div>
         <div class="form-group">
+            <label for="exampleFormControlSelect1">Tags:</label>
+            <select id="multi-select-tag" name="tag[]" multiple>
+                <?php foreach ($tags as $tag): ?>
+                    <option <?php if(in_array("$tag->id", $t->tags)) echo "selected"; ?> value="<?= $tag->id ?>"><?= $tag->tag ?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+        <div class="form-group">
             <label for="exampleFormControlTextarea1">Trecho</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name="texto" ><?=$t->texto?></textarea>
         </div>
@@ -41,11 +49,22 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const element = document.getElementById('multi-select');
+    const element = document.getElementById('multi-select-language');
     const choices = new Choices(element, {
       removeItemButton: true,
       searchEnabled: true,
       placeholderValue: 'Selecione as linguagens',
+      noResultsText: 'Nenhum resultado',
+      itemSelectText: '',
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const element = document.getElementById('multi-select-tag');
+    const choices = new Choices(element, {
+      removeItemButton: true,
+      searchEnabled: true,
+      placeholderValue: 'Selecione as tags',
       noResultsText: 'Nenhum resultado',
       itemSelectText: '',
     });
