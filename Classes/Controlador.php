@@ -37,21 +37,28 @@ class Controlador{
     }
 
     function cadastro(){
+        $alerta = '';
+
         if (filter_input(INPUT_POST, 'email')){
             $t = new Usuario();
             $t -> nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
             $t -> email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
-            $senha1 = filter_input(INPUT_POST, 'senha1', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
-            $senha2 = filter_input(INPUT_POST, 'senha2', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
+            $senha1 = filter_input(INPUT_POST, 'senha1', FILTER_SANITIZE_SPECIAL_CHARS);
+            $senha2 = filter_input(INPUT_POST, 'senha2', FILTER_SANITIZE_SPECIAL_CHARS);
+            
+            $salvar = true;
+            if ($senha1 != $senha2){
+                $alerta = "As duas senhas não são iguais!";
+                $salvar = false;
+            }
 
-            if ($senha1 == $senha2){
+            if ($salvar){
+                $t->senha = $senha1;
                 if ($t->salvar()){
                     header('Location:index.php');
                     exit;
                 };
             }
-
-
         }
 
         $page = 'cadastro';

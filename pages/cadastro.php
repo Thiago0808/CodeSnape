@@ -2,7 +2,7 @@
 <div class="row">
 
   <div class="col-lg-12">
-    <h1 class="page-header">Cadastro <small></small></h1>
+    <h1 class="page-header">Cadastro</h1>
   </div>
   <form action="" method="post">
     <div class="form-group">
@@ -16,10 +16,12 @@
     <div class="form-group">
       <label for="exampleFormControlInput1">Senha: </label>
       <input type="password" class="mid-input form-control" id="exampleFormControlInput1" placeholder="Sua senha" name="senha1" maxlength="255">
+      <p class="alerta"><?= $alerta?></p>
     </div>
     <div class="form-group">
       <label for="exampleFormControlInput1">Confirmar Senha: </label>
       <input type="password" class="mid-input form-control" id="exampleFormControlInput1" placeholder="Confirme a senha" name="senha2" maxlength="255">
+      <p class="alerta"><?= $alerta?></p>
     </div>
     <div>
       <button type="submit" class="btn btn-dark">Cadastrar</button>

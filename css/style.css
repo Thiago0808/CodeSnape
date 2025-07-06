@@ -18,6 +18,11 @@ footer {
 	max-width: 400px !important;
 }
 
+.alerta{
+	color: red;
+	margin: 0;
+}
+
 form{
 	padding-left: 15px;
 	padding-right: 15px;
