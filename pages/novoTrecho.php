@@ -25,6 +25,8 @@
                 <option>MySQL</option>
                 <option>PHP</option>
                 <option>Python</option>
+                <option>React</option>
+                <option>React Native</option>
                 <option>Ruby</option>
                 <option>Rust</option>
                 <option>Shell</option>

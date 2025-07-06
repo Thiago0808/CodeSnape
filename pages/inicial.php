@@ -26,6 +26,8 @@
         <option <?php if(in_array("MySQL", $filtroLinguagens)) echo "selected"; ?>>MySQL</option>
         <option <?php if(in_array("PHP", $filtroLinguagens)) echo "selected"; ?>>PHP</option>
         <option <?php if(in_array("Python", $filtroLinguagens)) echo "selected"; ?>>Python</option>
+        <option <?php if(in_array("React", $filtroLinguagens)) echo "selected"; ?>>React</option>
+        <option <?php if(in_array("React Native", $filtroLinguagens)) echo "selected"; ?>>React Native</option>
         <option <?php if(in_array("Ruby", $filtroLinguagens)) echo "selected"; ?>>Ruby</option>
         <option <?php if(in_array("Rust", $filtroLinguagens)) echo "selected"; ?>>Rust</option>
         <option <?php if(in_array("Shell", $filtroLinguagens)) echo "selected"; ?>>Shell</option>

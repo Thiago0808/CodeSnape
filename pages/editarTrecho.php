@@ -25,6 +25,8 @@
                 <option <?php if(in_array("MySQL", $selecionadas)) echo "selected"; ?>>MySQL</option>
                 <option <?php if(in_array("PHP", $selecionadas)) echo "selected"; ?>>PHP</option>
                 <option <?php if(in_array("Python", $selecionadas)) echo "selected"; ?>>Python</option>
+                <option <?php if(in_array("React", $selecionadas)) echo "selected"; ?>>React</option>
+                <option <?php if(in_array("React Native", $selecionadas)) echo "selected"; ?>>React Native</option>
                 <option <?php if(in_array("Ruby", $selecionadas)) echo "selected"; ?>>Ruby</option>
                 <option <?php if(in_array("Rust", $selecionadas)) echo "selected"; ?>>Rust</option>
                 <option <?php if(in_array("Shell", $selecionadas)) echo "selected"; ?>>Shell</option>
