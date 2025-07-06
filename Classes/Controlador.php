@@ -36,6 +36,28 @@ class Controlador{
         require 'template.php';
     }
 
+    function cadastro(){
+        if (filter_input(INPUT_POST, 'email')){
+            $t = new Usuario();
+            $t -> nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
+            $t -> email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
+            $senha1 = filter_input(INPUT_POST, 'senha1', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
+            $senha2 = filter_input(INPUT_POST, 'senha2', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
+
+            if ($senha1 == $senha2){
+                if ($t->salvar()){
+                    header('Location:index.php');
+                    exit;
+                };
+            }
+
+
+        }
+
+        $page = 'cadastro';
+        require 'template.php';
+    }
+
     function novoTrecho(){
         $tags = Tag::lista();
 

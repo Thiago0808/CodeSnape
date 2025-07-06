@@ -11,7 +11,11 @@ footer {
 }
 
 .short-input{
-	max-width: 200px !important;;
+	max-width: 200px !important;
+}
+
+.mid-input{
+	max-width: 400px !important;
 }
 
 form{

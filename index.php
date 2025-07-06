@@ -8,6 +8,10 @@ $p = filter_input(INPUT_GET, 'p');
 $c = new Controlador;
 
 switch ($p) {
+    case 'cadastro':
+        $c->cadastro();
+        break;
+        
     case 'novoTrecho':
         $c->novoTrecho();
         break;
