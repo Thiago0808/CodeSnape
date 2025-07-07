@@ -1,5 +1,6 @@
 <?php
 require 'autoload.php';
+session_start();
 
 use CodeSnape\Classes\Controlador;
 
@@ -8,6 +9,10 @@ $p = filter_input(INPUT_GET, 'p');
 $c = new Controlador;
 
 switch ($p) {
+    case 'login':
+        $c->login();
+        break;
+        
     case 'cadastro':
         $c->cadastro();
         break;

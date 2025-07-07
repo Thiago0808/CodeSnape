@@ -36,6 +36,38 @@ class Controlador{
         require 'template.php';
     }
 
+    function login(){
+        $alertaSenha = '';
+        $alertaEmail = '';
+
+        if (filter_input(INPUT_POST, 'email')){
+            $t = new Usuario();
+            $t -> email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
+            $t->senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
+            
+            $salvar = true;
+            // if ($senha1 != $senha2){
+            //     $alertaSenha = "As duas senhas não são iguais!";
+            //     $salvar = false;
+            // }
+
+            // if (!$t->verificarEmail()){
+            //     $alertaEmail = "Email já cadastrado";
+            //     $salvar = false;
+            // }
+
+            if ($salvar){
+                if ($t->logar()){
+                    header('Location:index.php');
+                    exit;
+                };
+            }
+        }
+
+        $page = 'login';
+        require 'template.php';
+    }
+    
     function cadastro(){
         $alertaSenha = '';
         $alertaEmail = '';

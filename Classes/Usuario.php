@@ -35,6 +35,22 @@ class Usuario{
         // }
     }
 
+    function logar(){
+        $conn = new Conexao();
+        $sql = "SELECT * FROM usuario WHERE email='$this->email' ";
+        $u = $conn->query($sql)->fetch();
+
+        #Verificar se a senha confere
+        if (password_verify($this->senha, $u['senha'])){
+            $_SESSION['id'] = $u['id'];
+            return true;
+        }
+        else{
+            return false;
+        }
+
+    }
+
     function salvar(){
         $hash = password_hash($this->senha, PASSWORD_BCRYPT);
         $conn = new Conexao();
