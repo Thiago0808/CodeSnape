@@ -12,7 +12,11 @@ switch ($p) {
     case 'login':
         $c->login();
         break;
-        
+    
+    case 'logout':
+        $c->logout();
+        break;
+
     case 'cadastro':
         $c->cadastro();
         break;

@@ -46,7 +46,13 @@
             <li><a href="index.php">Meus Trechos</a></li>
             <li><a href="?p=novoTrecho">Adicionar</a></li>
             <li><a href="?p=inicialTag">Tags</a></li>
-            <li><a href="?p=login">Login</a></li>
+            <li>
+              <?php
+                echo isset($_SESSION['id']) 
+                  ? '<a href="?p=logout">Logout</a>' 
+                  : '<a href="?p=login">Login</a>';
+              ?>
+            </li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->

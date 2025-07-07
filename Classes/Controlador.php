@@ -65,6 +65,12 @@ class Controlador{
         $page = 'login';
         require 'template.php';
     }
+
+    function logout(){
+        session_destroy();
+        header('Location:index.php');
+        require 'template.php';
+    }
     
     function cadastro(){
         $alertaSenha = '';
