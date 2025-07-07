@@ -43,16 +43,15 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="index.php">Meus Trechos</a></li>
-            <li><a href="?p=novoTrecho">Adicionar</a></li>
-            <li><a href="?p=inicialTag">Tags</a></li>
-            <li>
-              <?php
-                echo isset($_SESSION['id']) 
-                  ? '<a href="?p=logout">Logout</a>' 
-                  : '<a href="?p=login">Login</a>';
-              ?>
-            </li>
+            <?php if (isset($_SESSION['id'])): ?>
+              <li><a href="index.php">Meus Trechos</a></li>
+              <li><a href="?p=novoTrecho">Adicionar</a></li>
+              <li><a href="?p=inicialTag">Tags</a></li>
+              <li><a href="?p=logout">Logout</a></li>
+            <?php else: ?>
+              <li><a href="?p=login">Login</a></li>
+              <li><a href="?p=cadastro">Cadastro</a></li>
+            <?php endif; ?>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->

@@ -23,6 +23,10 @@ footer {
 	margin: 0;
 }
 
+.botao-cadastro{
+	margin-top: 1rem;
+}
+
 form{
 	padding-left: 15px;
 	padding-right: 15px;

@@ -23,6 +23,9 @@
       <button type="submit" class="btn btn-dark">Logar</button>
     </div>
   </form>
+  <div class="col-lg-12">
+    <a href='?p=cadastro'><button type='button' class='btn btn-default botao-cadastro'>Sem conta? Clique aqui para se Cadastrar</button></a>
+  </div>
   
 
 </div>
