@@ -37,7 +37,8 @@ class Controlador{
     }
 
     function cadastro(){
-        $alerta = '';
+        $alertaSenha = '';
+        $alertaEmail = '';
 
         if (filter_input(INPUT_POST, 'email')){
             $t = new Usuario();
@@ -48,7 +49,12 @@ class Controlador{
             
             $salvar = true;
             if ($senha1 != $senha2){
-                $alerta = "As duas senhas não são iguais!";
+                $alertaSenha = "As duas senhas não são iguais!";
+                $salvar = false;
+            }
+
+            if (!$t->verificarEmail()){
+                $alertaEmail = "Email já cadastrado";
                 $salvar = false;
             }
 

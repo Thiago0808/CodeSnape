@@ -44,6 +44,17 @@ class Usuario{
         return true;
     }
 
+    function verificarEmail(){
+        $conn = new Conexao();
+        $u = $conn -> query("SELECT id FROM usuario WHERE email='$this->email' ");
+        if ($u->rowCount() > 0){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+
 
     // function deletar(){
     //         $conn = new Conexao();
