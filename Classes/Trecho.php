@@ -84,8 +84,8 @@ class Trecho{
             $tagsBanco = $stmt->fetchAll(\PDO::FETCH_COLUMN);
 
             if ($tagsBanco){
-                $inserir = array_diff($this->tags, $tagsBanco);
-                $deletar = array_diff($tagsBanco, $this->tags);
+                $inserir = array_diff($this->tags? $this->tags : [], $tagsBanco);
+                $deletar = array_diff($tagsBanco, $this->tags? $this->tags : []);
             }
 
             if ($tagsBanco){
