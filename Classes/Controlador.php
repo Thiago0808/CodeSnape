@@ -46,21 +46,19 @@ class Controlador{
             $t->senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
             
             $salvar = true;
-            // if ($senha1 != $senha2){
-            //     $alertaSenha = "As duas senhas não são iguais!";
-            //     $salvar = false;
-            // }
-
-            // if (!$t->verificarEmail()){
-            //     $alertaEmail = "Email já cadastrado";
-            //     $salvar = false;
-            // }
+            if (!$t->verificarEmail()){
+                $alertaEmail = "Email não cadastrado";
+                $salvar = false;
+            }
 
             if ($salvar){
                 if ($t->logar()){
                     header('Location:index.php');
                     exit;
-                };
+                }
+                else{
+                    $alertaSenha = "A senha está incorreta";
+                }
             }
         }
 
@@ -85,7 +83,7 @@ class Controlador{
                 $salvar = false;
             }
 
-            if (!$t->verificarEmail()){
+            if ($t->verificarEmail()){
                 $alertaEmail = "Email já cadastrado";
                 $salvar = false;
             }
