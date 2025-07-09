@@ -40,7 +40,8 @@ class Trecho{
 
     function salvar(){
         $conn = new Conexao();
-        $sql = "INSERT INTO trecho (titulo, texto) VALUES ('$this->titulo', '$this->texto' )";
+        $usuario_id = $_SESSION['id'];
+        $sql = "INSERT INTO trecho (titulo, texto, usuario_id) VALUES ('$this->titulo', '$this->texto', $usuario_id )";
 
         $r = $conn->query($sql);
         if ($r){
@@ -122,31 +123,27 @@ class Trecho{
 
     static function lista($filtroTitulo=null, $filtroLinguagens=null, $filtroTags=null){
         $conn = new Conexao();
-
-        $whereOrAnd = ' WHERE ';
+        $usuario_id = $_SESSION['id'];
 
         $sqlTitulo = '';
         if ($filtroTitulo){
-            $sqlTitulo = "$whereOrAnd trecho.titulo LIKE '%$filtroTitulo%' ";
-            $whereOrAnd = ' AND ';
+            $sqlTitulo = "AND trecho.titulo LIKE '%$filtroTitulo%' ";
         }
 
         $sqlLinguagens = '';
         if ($filtroLinguagens) {
             $ids = implode("','", $filtroLinguagens);
-            $sqlLinguagens = "$whereOrAnd trecho.id IN (
+            $sqlLinguagens = "AND trecho.id IN (
                 SELECT trecho_id FROM linguagem WHERE nome IN ('$ids')
             )";
-            $whereOrAnd = ' AND ';
         }
 
         $sqlTags = '';
         if ($filtroTags) {
             $ids = implode("','", $filtroTags);
-            $sqlTags = "$whereOrAnd trecho.id IN (
+            $sqlTags = "AND trecho.id IN (
                 SELECT trecho_id FROM tag_trecho WHERE tag_id IN ('$ids')
             )";
-            $whereOrAnd = ' AND ';
         }
 
         $sql = "
@@ -154,6 +151,7 @@ class Trecho{
             FROM trecho
             LEFT JOIN linguagem ON linguagem.trecho_id = trecho.id
             LEFT JOIN tag_trecho ON tag_trecho.trecho_id = trecho.id
+            WHERE usuario_id = $usuario_id 
             $sqlTags
             $sqlTitulo
             $sqlLinguagens
@@ -171,6 +169,17 @@ class Trecho{
         return $resultado;
     }
 
+    function verificarUsuario($usuario_id, $trecho_id){
+        $conn = new Conexao();
+        $trecho = $conn->query("SELECT id FROM trecho WHERE id=$trecho_id AND usuario_id = $usuario_id")->fetch();
+        if ($trecho){
+            return true;
+        }
+        else{
+            return false;
+        }
+        return true;
+    }
 }
 
 ?>

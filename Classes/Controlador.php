@@ -133,6 +133,9 @@ class Controlador{
         if (filter_input(INPUT_GET, 'id')){
             $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
             $t = new Trecho($id);
+            if (!$t->verificarUsuario($_SESSION['id'], $id)){
+                header('Location:index.php');
+            }
             $t->texto = str_replace("&#13;&#10;", "<br />", $t->texto);
         }
 
@@ -144,7 +147,12 @@ class Controlador{
         if (filter_input(INPUT_GET, 'id')){
             $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
             $t = new Trecho($id);
-            $t->deletar();
+            if (!$t->verificarUsuario($_SESSION['id'], $id)){
+                header('Location:index.php');
+            }
+            else{
+                $t->deletar();
+            }
         }
 
         header('Location:index.php');
@@ -157,6 +165,9 @@ class Controlador{
         if (filter_input(INPUT_GET, 'id')){
             $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
             $t = new Trecho($id);
+            if (!$t->verificarUsuario($_SESSION['id'], $id)){
+                header('Location:index.php');
+            }
             $selecionadas = array_map('trim', explode(',', $t->linguagens));
         }
 
@@ -210,7 +221,12 @@ class Controlador{
         if (filter_input(INPUT_GET, 'id')){
             $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
             $t = new Tag($id);
-            $t->deletar();
+            if (!$t->verificarUsuario($_SESSION['id'], $id)){
+                header('Location:index.php');
+            }
+            else{
+                $t->deletar();
+            }
         }
 
         header('Location:index.php?p=inicialTag');
@@ -222,6 +238,9 @@ class Controlador{
         if (filter_input(INPUT_GET, 'id')){
             $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
             $t = new Tag($id);
+            if (!$t->verificarUsuario($_SESSION['id'], $id)){
+                header('Location:index.php?p=inicialTag');
+            }
         }
 
         if (filter_input(INPUT_POST, 'tag')){

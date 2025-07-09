@@ -27,7 +27,8 @@ class Tag{
 
     function salvar(){
         $conn = new Conexao();
-        $sql = "INSERT INTO tag (tag, color) VALUES ('$this->tag', '$this->color')";
+        $usuario_id = $_SESSION['id'];
+        $sql = "INSERT INTO tag (tag, color, usuario_id) VALUES ('$this->tag', '$this->color', $usuario_id)";
 
         $conn->query($sql);
         return true;
@@ -48,20 +49,32 @@ class Tag{
 
     static function lista($filtroTag=null){
         $conn = new Conexao();
+        $usuario_id = $_SESSION['id'];
 
         $sqlFiltro = '';
         if ($filtroTag){
-            $sqlFiltro = "WHERE tag.tag LIKE '%$filtroTag%' ";
+            $sqlFiltro = "AND tag.tag LIKE '%$filtroTag%' ";
         }
 
 
-        $sql = "SELECT * FROM tag $sqlFiltro";
+        $sql = "SELECT * FROM tag WHERE usuario_id = $usuario_id  $sqlFiltro";
         $stmt = $conn->query($sql);
 
         # Arrary de objetos Texto
         return $stmt->fetchAll(\PDO::FETCH_CLASS, "\CodeSnape\Classes\Tag");
     }
 
+    function verificarUsuario($usuario_id, $tag_id){
+        $conn = new Conexao();
+        $trecho = $conn->query("SELECT id FROM tag WHERE id=$tag_id AND usuario_id = $usuario_id")->fetch();
+        if ($trecho){
+            return true;
+        }
+        else{
+            return false;
+        }
+        return true;
+    }
 }
 
 ?>
