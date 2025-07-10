@@ -3,3 +3,18 @@
         margin-bottom: 50px;
     }
 }
+
+@media screen and (max-width:768px) {
+    .portfolio-item{
+        margin-bottom: 50px;
+    }
+
+    .container_nav{
+        display: block;
+        width: 100%;
+    }
+
+    .navbar-header{
+        width: 100%;
+    }
+}
