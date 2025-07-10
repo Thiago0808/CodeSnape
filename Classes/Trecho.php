@@ -33,7 +33,7 @@ class Trecho{
                 $this->tags=$selectedTagIds;
             } 
             else{
-                die ('Registro não Encontrado');
+                die ('Trecho não Encontrado');
             }
         }
     }

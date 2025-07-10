@@ -48,6 +48,7 @@
               <li><a href="?p=novoTrecho">Adicionar</a></li>
               <li><a href="?p=inicialTag">Tags</a></li>
               <li><a href="?p=logout">Logout</a></li>
+              <li><a href="?p=deletarConta">Deletar Conta</a></li>
             <?php else: ?>
               <li><a href="?p=login">Login</a></li>
               <li><a href="?p=cadastro">Cadastro</a></li>

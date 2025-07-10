@@ -257,4 +257,24 @@ class Controlador{
         $page = 'editarTag';
         require 'template.php';
     }
+
+    function deletarConta(){
+        $alertaErro = '';
+
+        if (filter_input(INPUT_POST, 'deletar')){
+            $delete = filter_input(INPUT_POST, 'deletar', FILTER_SANITIZE_SPECIAL_CHARS);
+            if ($delete == "DeletarConta"){
+                $u = new Usuario($_SESSION['id']);
+                $u->deletar();
+                header('Location:index.php?p=login');
+            }
+            else{
+                $alertaErro = 'Digite o que está sendo pedido';
+            }
+
+        }
+
+        $page = 'deletarConta';
+        require 'template.php';
+    }
 }

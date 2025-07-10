@@ -64,6 +64,10 @@ else{
         case 'deletarTag':
             $c->deletarTag();
             break;
+
+        case 'deletarConta':
+            $c->deletarConta();
+            break;
         
         default:
             $c->inicial();

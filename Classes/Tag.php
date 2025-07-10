@@ -20,7 +20,7 @@ class Tag{
                 $this->color=$tag['color'];
             } 
             else{
-                die ('Registro não Encontrado');
+                die ('Tag não Encontrada');
             }
         }
     }
