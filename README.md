@@ -8,7 +8,7 @@ Adicione, edite e delete qualquer trecho, dando a ele um título, e selecionando
 
 <h1 align="center">Instruções de Uso</h1>
 
-Para utillizar o CodeSnape, é necessário adicionar o codesnape.sql em seu computador, para conectar com o banco de dados, necessário para utilização do site:
+Para utilizar o CodeSnape, é necessário adicionar o codesnape.sql em seu computador, para conectar com o banco de dados, necessário para utilização do site:
 
 1ª Forma: Copie o código dentro do arquivo codesnape.sql, e em seu terminal, inicie seu banco de dados com o comando "mysql -u root -p", e então cole o código;
 
