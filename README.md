@@ -2,9 +2,9 @@
 <img style="width: 25%;" src="https://github.com/Thiago0808/CodeSnape/assets/141963700/0563959a-8744-4fd8-9dc7-c6e4457c2382" />
 </div>
 
-Sejam bem-vindos ao CodeSnape, onde vocês podem armazenar trechos dos seus códigos mais utilizados, para ter fácil acesso sempre que necessário em seus projetos.
+Sejam bem-vindos ao CodeSnape, onde vocês podem armazenar trechos dos seus códigos mais utilizados em suas próprias contas, para ter fácil acesso sempre que necessário em seus projetos.
 
-Adicione, edite e delete qualquer trecho, dando a ele um título, e selecionando suas linguagens. Todos os trechos podem ser visualizados, modificados e filtrados na página principal.
+Adicione, edite e delete qualquer trecho, dando a ele um título, e selecionando suas linguagens. Todos os trechos podem ser visualizados, modificados e filtrados na página principal, assim como suas tags!
 
 <h1 align="center">Instruções de Uso</h1>
 
@@ -17,16 +17,6 @@ Para utillizar o CodeSnape, é necessário adicionar o codesnape.sql em seu comp
 <div align="center">
 <video style="width: 80%;" src="https://github.com/Thiago0808/CodeSnape/assets/141963700/793169e4-9d88-47d6-8c2b-b8bcb1e770ca"/>
 </div>
-
-<h1 align="center">Atualizações Futuras</h1>
-
-<h2 align="left">Tags</h1>
-
-Haverá também um sistema de tags personalizadas, que trabalharão junto com o filtro.
-
-<h2 align="left">Perfil e Online</h1>
-
-E a maior atualização que pretendo realizar no CodeSnape é possibilitar a criação de perfils, sendo possível compartilhar e visualizar os trechos de outras pessoas.
 
 <h1 align="center">Créditos</h1>
 
