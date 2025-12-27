@@ -2,16 +2,16 @@
 <div class="row">
 
   <div class="col-lg-12">
-    <h1 class="page-header">Meus Trechos <small>Encontre seus códigos rapidamente</small></h1>
+    <h1 class="page-header">My Snippets <small>Find your codes quickly</small></h1>
   </div>
   <form action="" method="post">
     <div class="form-group">
-      <label for="exampleFormControlInput1">Filtrar por Nome:</label>
-      <input type="text" class="short-input form-control" id="exampleFormControlInput1" placeholder="Titulo" name="titulo" maxlength="24"
+      <label for="exampleFormControlInput1">Filter by Name:</label>
+      <input type="text" class="short-input form-control" id="exampleFormControlInput1" placeholder="Name" name="titulo" maxlength="24"
         value="<?php echo isset($_POST['titulo']) ? htmlspecialchars($_POST['titulo']) : ''; ?>">
     </div>
     <div class="form-group">
-      <label for="exampleFormControlSelect1">Filtrar por Linguagens:</label>
+      <label for="exampleFormControlSelect1">Filter by Languages:</label>
       <select id="multi-select-language" name="linguagem[]" multiple>
         <option <?php if(in_array("Bash", $filtroLinguagens)) echo "selected"; ?>>Bash</option>
         <option <?php if(in_array("C", $filtroLinguagens)) echo "selected"; ?>>C</option>
@@ -35,7 +35,7 @@
       </select>
     </div>
       <div class="form-group">
-        <label for="exampleFormControlSelect1">Filtrar por Tags:</label>
+        <label for="exampleFormControlSelect1">Filter by Tags:</label>
         <select id="multi-select-tag" name="tag[]" multiple>
             <?php foreach ($tags as $tag): ?>
                 <option <?php if(in_array("$tag->id", $filtroTags)) echo "selected"; ?> value="<?= $tag->id ?>"><?= $tag->tag ?></option>
@@ -43,7 +43,7 @@
         </select>
     </div>
     <div>
-      <button type="submit" class="btn btn-dark">Filtrar</button>
+      <button type="submit" class="btn btn-dark">Filter</button>
     </div>
   </form>
   
@@ -76,8 +76,8 @@
       }
 
       echo "<div class='botoes'>";
-        echo "<a href='?p=deletarTrecho&id=$t->id'><button type='button' class='btn btn-dark'>Deletar</button></a>";
-        echo "<a href='?p=editarTrecho&id=$t->id'><button type='button' class='btn btn-outline-dark'>Editar</button></a>";
+        echo "<a href='?p=deletarTrecho&id=$t->id'><button type='button' class='btn btn-dark'>Delete</button></a>";
+        echo "<a href='?p=editarTrecho&id=$t->id'><button type='button' class='btn btn-outline-dark'>Edit</button></a>";
       echo "</div>";  
     echo "</div>";
   }
@@ -91,8 +91,8 @@
     const choices = new Choices(element, {
       removeItemButton: true,
       searchEnabled: true,
-      placeholderValue: 'Selecione as linguagens',
-      noResultsText: 'Nenhum resultado',
+      placeholderValue: 'Select the languages',
+      noResultsText: 'No results',
       itemSelectText: '',
     });
   });
@@ -102,8 +102,8 @@
     const choices = new Choices(element, {
       removeItemButton: true,
       searchEnabled: true,
-      placeholderValue: 'Selecione as tags',
-      noResultsText: 'Nenhum resultado',
+      placeholderValue: 'Select the tags',
+      noResultsText: 'No results',
       itemSelectText: '',
     });
   });

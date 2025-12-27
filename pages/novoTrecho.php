@@ -1,16 +1,16 @@
 <div class="row">
 
     <div class="col-lg-12">
-        <h1 class="page-header">Adicionar <small>Novo Trecho</small></h1>
+        <h1 class="page-header">Add <small>New Snippet</small></h1>
     </div>
     
     <form action="" method="post">
         <div class="form-group">
-            <label for="exampleFormControlInput1">Nome do Trecho:</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Titulo" name="titulo" maxlength="24" required>
+            <label for="exampleFormControlInput1">Snippet Name:</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name" name="titulo" maxlength="24" required>
         </div>
         <div class="form-group">
-            <label for="exampleFormControlSelect1">Linguagens:</label>
+            <label for="exampleFormControlSelect1">Languages:</label>
             <select id="multi-select-language" name="linguagem[]" multiple required>
                 <option>Bash</option>
                 <option>C</option>
@@ -42,10 +42,10 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="exampleFormControlTextarea1">Trecho</label>
+            <label for="exampleFormControlTextarea1">Snippet</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name="texto" required></textarea>
         </div>
-        <button type="submit" class="btn btn-dark">Salvar</button>
+        <button type="submit" class="btn btn-dark">Save</button>
     </form>
 </div>
 
@@ -55,8 +55,8 @@
     const choices = new Choices(element, {
       removeItemButton: true,
       searchEnabled: true,
-      placeholderValue: 'Selecione as linguagens',
-      noResultsText: 'Nenhum resultado',
+      placeholderValue: 'Select the languages',
+      noResultsText: 'No result',
       itemSelectText: '',
     });
   });
@@ -66,8 +66,8 @@
     const choices = new Choices(element, {
       removeItemButton: true,
       searchEnabled: true,
-      placeholderValue: 'Selecione as tags',
-      noResultsText: 'Nenhum resultado',
+      placeholderValue: 'Select the tags',
+      noResultsText: 'No result',
       itemSelectText: '',
     });
   });

@@ -16,7 +16,7 @@ class Conexao extends PDO{
             parent::__construct($dns, $this->user, $this->password);
         } catch (PDOException $e) {
             file_put_contents("log.txt", $e->getMessage(). "\n\n", FILE_APPEND | LOCK_EX);
-            die("Erro ao conectar no banco de dados. Tente novamente mais tarde");        }
+            die("Error connecting to the database. Try again later");        }
     }
 }
 

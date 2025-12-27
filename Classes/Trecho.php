@@ -33,7 +33,7 @@ class Trecho{
                 $this->tags=$selectedTagIds;
             } 
             else{
-                die ('Trecho não Encontrado');
+                die ('Snippet not found');
             }
         }
     }

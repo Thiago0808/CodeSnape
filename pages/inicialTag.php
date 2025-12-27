@@ -2,18 +2,18 @@
 <div class="row">
 
   <div class="col-lg-12 tags-header">
-    <h1 class="page-header">Minhas Tags</h1>
+    <h1 class="page-header">My Tags</h1>
     <a href='?p=novaTag' class="page-header no-border"><button type='button' class='btn btn-dark'><strong>+</strong></button></a>
   </div>
 
   <form action="" method="post">
     <div class="form-group">
-      <label for="exampleFormControlInput1">Filtrar por Nome:</label>
+      <label for="exampleFormControlInput1">Filter by Name:</label>
       <input type="text" class="filter-name form-control" id="exampleFormControlInput1" placeholder="Tag" name="tag" maxlength="24"
         value="<?php echo isset($_POST['tag']) ? htmlspecialchars($_POST['tag']) : ''; ?>">
     </div>
     <div>
-      <button type="submit" class="btn btn-dark">Filtrar</button>
+      <button type="submit" class="btn btn-dark">Filter</button>
     </div>
   </form>
   
@@ -42,8 +42,8 @@
     echo "<div class='col-md-4 portfolio-item'>";
       echo "<h3 class='tag tag-grande' style='background-color: $t->color; color: $corTexto;'>$t->tag</h3>";
       echo "<div class='botoes'>";
-        echo "<a href='?p=deletarTag&id=$t->id'><button type='button' class='btn btn-dark'>Deletar</button></a>";
-        echo "<a href='?p=editarTag&id=$t->id'><button type='button' class='btn btn-outline-dark'>Editar</button></a>";
+        echo "<a href='?p=deletarTag&id=$t->id'><button type='button' class='btn btn-dark'>Delete</button></a>";
+        echo "<a href='?p=editarTag&id=$t->id'><button type='button' class='btn btn-outline-dark'>Edit</button></a>";
       echo "</div>";  
     echo "</div>";
   }

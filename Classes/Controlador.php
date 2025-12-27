@@ -47,7 +47,7 @@ class Controlador{
             
             $salvar = true;
             if (!$t->verificarEmail()){
-                $alertaEmail = "Email não cadastrado";
+                $alertaEmail = "Email not found";
                 $salvar = false;
             }
 
@@ -57,7 +57,7 @@ class Controlador{
                     exit;
                 }
                 else{
-                    $alertaSenha = "A senha está incorreta";
+                    $alertaSenha = "The password is incorrect";
                 }
             }
         }
@@ -85,12 +85,12 @@ class Controlador{
             
             $salvar = true;
             if ($senha1 != $senha2){
-                $alertaSenha = "As duas senhas não são iguais!";
+                $alertaSenha = "The two passwords are not equal!";
                 $salvar = false;
             }
 
             if ($t->verificarEmail()){
-                $alertaEmail = "Email já cadastrado";
+                $alertaEmail = "Email already registered";
                 $salvar = false;
             }
 
@@ -263,13 +263,13 @@ class Controlador{
 
         if (filter_input(INPUT_POST, 'deletar')){
             $delete = filter_input(INPUT_POST, 'deletar', FILTER_SANITIZE_SPECIAL_CHARS);
-            if ($delete == "DeletarConta"){
+            if ($delete == "DeleteAccount"){
                 $u = new Usuario($_SESSION['id']);
                 $u->deletar();
                 header('Location:index.php?p=login');
             }
             else{
-                $alertaErro = 'Digite o que está sendo pedido';
+                $alertaErro = 'Please type "DeleteAccount" correctly to confirm deletion.';
             }
 
         }

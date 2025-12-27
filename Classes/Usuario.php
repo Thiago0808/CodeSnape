@@ -21,7 +21,7 @@ class Usuario{
                 $this->senha=$usuario['senha'];
             } 
             else{
-                die ('Usuário não Encontrado');
+                die ('User not found');
             }
         }
     }

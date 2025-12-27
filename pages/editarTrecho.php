@@ -1,16 +1,16 @@
 <div class="row">
 
     <div class="col-lg-12">
-        <h1 class="page-header">Editar <small>Trecho</small></h1>
+        <h1 class="page-header">Edit <small>Snippet</small></h1>
     </div>
     
     <form action="" method="post">
         <div class="form-group">
-            <label for="exampleFormControlInput1">Nome do Trecho:</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Titulo" name="titulo" value="<?=$t->titulo?>" required>
+            <label for="exampleFormControlInput1">Snippet Name:</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name" name="titulo" value="<?=$t->titulo?>" required>
         </div>
         <div class="form-group">
-            <label for="exampleFormControlSelect1">Linguagens:</label>
+            <label for="exampleFormControlSelect1">Languages:</label>
             <select id="multi-select-language" name="linguagem[]" multiple required>
                 <option <?php if(in_array("Bash", $selecionadas)) echo "selected"; ?>>Bash</option>
                 <option <?php if(in_array("C", $selecionadas)) echo "selected"; ?>>C</option>
@@ -42,10 +42,10 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="exampleFormControlTextarea1">Trecho</label>
+            <label for="exampleFormControlTextarea1">Snippet</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name="texto" ><?=$t->texto?></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Salvar</button>
+        <button type="submit" class="btn btn-primary">Save</button>
     </form>
 </div>
 
@@ -55,8 +55,8 @@
     const choices = new Choices(element, {
       removeItemButton: true,
       searchEnabled: true,
-      placeholderValue: 'Selecione as linguagens',
-      noResultsText: 'Nenhum resultado',
+      placeholderValue: 'Select the languages',
+      noResultsText: 'No results',
       itemSelectText: '',
     });
   });
@@ -66,8 +66,8 @@
     const choices = new Choices(element, {
       removeItemButton: true,
       searchEnabled: true,
-      placeholderValue: 'Selecione as tags',
-      noResultsText: 'Nenhum resultado',
+      placeholderValue: 'Select the tags',
+      noResultsText: 'No results',
       itemSelectText: '',
     });
   });

@@ -44,14 +44,14 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav">
             <?php if (isset($_SESSION['id'])): ?>
-              <li><a href="index.php">Meus Trechos</a></li>
-              <li><a href="?p=novoTrecho">Adicionar</a></li>
+              <li><a href="index.php">My Snippets</a></li>
+              <li><a href="?p=novoTrecho">Add</a></li>
               <li><a href="?p=inicialTag">Tags</a></li>
               <li><a href="?p=logout">Logout</a></li>
-              <li><a href="?p=deletarConta">Deletar Conta</a></li>
+              <li><a href="?p=deletarConta">Delete Account</a></li>
             <?php else: ?>
               <li><a href="?p=login">Login</a></li>
-              <li><a href="?p=cadastro">Cadastro</a></li>
+              <li><a href="?p=cadastro">Register</a></li>
             <?php endif; ?>
           </ul>
         </div><!-- /.navbar-collapse -->
