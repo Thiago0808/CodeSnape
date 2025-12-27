@@ -10,7 +10,7 @@ $c = new Controlador;
 
 if (!isset($_SESSION['id'])){
     switch ($p) {
-    case 'cadastro':
+    case 'register':
         $c->cadastro();
         break;
     
@@ -29,43 +29,43 @@ else{
             $c->logout();
             break;
 
-        case 'cadastro':
+        case 'register':
             $c->cadastro();
             break;
             
-        case 'novoTrecho':
+        case 'newSnippet':
             $c->novoTrecho();
             break;
         
-        case 'verTrecho':
+        case 'viewSnippet':
             $c->verTrecho();
             break;
 
-        case 'editarTrecho':
+        case 'editSnippet':
             $c->editarTrecho();
             break;
 
-        case 'deletarTrecho':
+        case 'deleteSnippet':
             $c->deletarTrecho();
             break;
 
-        case 'inicialTag':
+        case 'initialTag':
             $c->inicialTag();
             break;
         
-        case 'novaTag':
+        case 'newTag':
             $c->novaTag();
             break;
             
-        case 'editarTag':
+        case 'editTag':
             $c->editarTag();
             break;
 
-        case 'deletarTag':
+        case 'deleteTag':
             $c->deletarTag();
             break;
 
-        case 'deletarConta':
+        case 'deleteAccount':
             $c->deletarConta();
             break;
         

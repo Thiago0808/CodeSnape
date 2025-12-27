@@ -62,7 +62,7 @@
   foreach ($trechos as $t){
     echo "<div class='col-md-4 portfolio-item'>";
       echo "<code class='code_inicial'>$t->texto</code>";
-      echo "<h3><a href='?p=verTrecho&id=$t->id'>$t->titulo</a></h3>";
+      echo "<h3><a href='?p=viewSnippet&id=$t->id'>$t->titulo</a></h3>";
       echo "<p>$t->linguagens</p>";
 
       
@@ -76,8 +76,8 @@
       }
 
       echo "<div class='botoes'>";
-        echo "<a href='?p=deletarTrecho&id=$t->id'><button type='button' class='btn btn-dark'>Delete</button></a>";
-        echo "<a href='?p=editarTrecho&id=$t->id'><button type='button' class='btn btn-outline-dark'>Edit</button></a>";
+        echo "<a href='?p=deleteSnippet&id=$t->id'><button type='button' class='btn btn-dark'>Deletar</button></a>";
+        echo "<a href='?p=editSnippet&id=$t->id'><button type='button' class='btn btn-outline-dark'>Editar</button></a>";
       echo "</div>";  
     echo "</div>";
   }

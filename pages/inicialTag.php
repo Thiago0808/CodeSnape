@@ -3,7 +3,7 @@
 
   <div class="col-lg-12 tags-header">
     <h1 class="page-header">My Tags</h1>
-    <a href='?p=novaTag' class="page-header no-border"><button type='button' class='btn btn-dark'><strong>+</strong></button></a>
+    <a href='?p=newTag' class="page-header no-border"><button type='button' class='btn btn-dark'><strong>+</strong></button></a>
   </div>
 
   <form action="" method="post">
@@ -42,8 +42,8 @@
     echo "<div class='col-md-4 portfolio-item'>";
       echo "<h3 class='tag tag-grande' style='background-color: $t->color; color: $corTexto;'>$t->tag</h3>";
       echo "<div class='botoes'>";
-        echo "<a href='?p=deletarTag&id=$t->id'><button type='button' class='btn btn-dark'>Delete</button></a>";
-        echo "<a href='?p=editarTag&id=$t->id'><button type='button' class='btn btn-outline-dark'>Edit</button></a>";
+        echo "<a href='?p=deleteTag&id=$t->id'><button type='button' class='btn btn-dark'>Delete</button></a>";
+        echo "<a href='?p=editTag&id=$t->id'><button type='button' class='btn btn-outline-dark'>Edit</button></a>";
       echo "</div>";  
     echo "</div>";
   }

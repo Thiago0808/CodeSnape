@@ -45,13 +45,13 @@
           <ul class="nav navbar-nav">
             <?php if (isset($_SESSION['id'])): ?>
               <li><a href="index.php">My Snippets</a></li>
-              <li><a href="?p=novoTrecho">Add</a></li>
-              <li><a href="?p=inicialTag">Tags</a></li>
+              <li><a href="?p=newSnippet">Add</a></li>
+              <li><a href="?p=initialTag">Tags</a></li>
               <li><a href="?p=logout">Logout</a></li>
-              <li><a href="?p=deletarConta">Delete Account</a></li>
+              <li><a href="?p=deleteAccount">Delete Account</a></li>
             <?php else: ?>
               <li><a href="?p=login">Login</a></li>
-              <li><a href="?p=cadastro">Register</a></li>
+              <li><a href="?p=register">Register</a></li>
             <?php endif; ?>
           </ul>
         </div><!-- /.navbar-collapse -->
@@ -72,7 +72,7 @@
       <footer>
         <div class="row">
           <div class="col-lg-12">
-            <p>&copy; <span id="getCurrentDate"></span> - Desenvolvido por Thiago Martins </p>
+            <p>&copy; <span id="getCurrentDate"></span> -  Built by Thiago Martins </p>
           </div>
         </div>
       </footer>

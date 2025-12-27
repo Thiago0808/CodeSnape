@@ -24,7 +24,7 @@
     </div>
   </form>
   <div class="col-lg-12">
-    <a href='?p=cadastro'><button type='button' class='btn btn-default botao-cadastro'>No account? Click here to register</button></a>
+    <a href='?p=register'><button type='button' class='btn btn-default botao-cadastro'>No account? Click here to register</button></a>
   </div>
   
 
