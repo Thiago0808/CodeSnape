@@ -76,8 +76,8 @@
       }
 
       echo "<div class='botoes'>";
-        echo "<a href='?p=deleteSnippet&id=$t->id'><button type='button' class='btn btn-dark'>Deletar</button></a>";
-        echo "<a href='?p=editSnippet&id=$t->id'><button type='button' class='btn btn-outline-dark'>Editar</button></a>";
+        echo "<a href='?p=deleteSnippet&id=$t->id'><button type='button' class='btn btn-dark'>Delete</button></a>";
+        echo "<a href='?p=editSnippet&id=$t->id'><button type='button' class='btn btn-outline-dark'>Edit</button></a>";
       echo "</div>";  
     echo "</div>";
   }
