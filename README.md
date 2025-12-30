@@ -11,7 +11,7 @@
   <img style="width: 25%;" src="https://github.com/Thiago0808/CodeSnape/assets/141963700/0563959a-8744-4fd8-9dc7-c6e4457c2382" />
 </div>
 
-Welcome to **CodeSnape**, where you can store snippets of your most frequently used code in your own account, giving you quick and easy access whenever you need them in your projects.
+Welcome to **CodeSnape**, where you can store snippets of your most frequently used codes in your own account, giving you quick and easy access whenever you need them in your projects.
 
 Add, edit, and delete any snippet by giving it a title and selecting its programming languages. All snippets can be viewed, edited, and filtered on the main page, along with their tags.
 
@@ -36,8 +36,7 @@ Download the `codesnape.sql` file and import it using a database management tool
 <h1 align="center">Credits</h1>
 
 The template used for the CodeSnape front-end belongs to the repository  
-<a href="https://github.com/learning-zone/website-templates">website-templates</a>,  
-which was created to provide ready-to-use templates for other developers.
+<a href="https://github.com/learning-zone/website-templates">website-templates</a>, which was created to provide ready-to-use templates for other developers.
 
 ---
 
@@ -72,7 +71,6 @@ Baixe o arquivo `codesnape.sql` e o importe em alguma ferramenta de gerenciament
 <h1 align="center">Créditos</h1>
 
 O template utilizado no front-end do CodeSnape pertence ao repositório  
-<a href="https://github.com/learning-zone/website-templates">website-templates</a>,  
-criado com o objetivo de oferecer templates prontos para outros desenvolvedores.
+<a href="https://github.com/learning-zone/website-templates">website-templates</a>, criado com o objetivo de oferecer templates prontos para outros desenvolvedores.
 
 
